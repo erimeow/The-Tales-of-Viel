@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755d144cd715dea4e8cde37d58fbc5ca, type: 3}
+  m_Name: NPC
+  m_EditorClassIdentifier: Assembly-CSharp::QtsData
+  questions:
+  - questionText: Ah Youre Finally awake. this place isn't safe, you know. if you
+      want to survive, you'll have to learn how to take care of your self
+    replies:
+    - Where am I?
+    correctReplyIndex: 0
+  - questionText: Somewhere far from the safety you're used to. Don't worry. I'll
+      teach you what you need to know. After that, you'll have to survive on your
+      own
+    replies:
+    - Okay! Teach me.
+    correctReplyIndex: 0
+  - questionText: First learn the movement controls so you can navigate the world
+    replies:
+    - ...
+    correctReplyIndex: 0
+  - questionText: Use WASD to move your character and click the right mouse to attack
+      enemies
+    replies:
+    - Okay got it!
+    correctReplyIndex: 0
+  - questionText: Collect meat and coins from your surrounding. you can use them
+      to buy items from the shop
+    replies:
+    - Alright!
+    correctReplyIndex: 0
+  - questionText: Beware of enemies they can attack you, so be ready to fight
+    replies:
+    - Okay thanks!
+    correctReplyIndex: 0
+  - questionText: You've proven yourself ready for the next stage. keep going and
+      good luck on your journey!
+    replies:
+    - Thank you! Im ready!
+    correctReplyIndex: 0

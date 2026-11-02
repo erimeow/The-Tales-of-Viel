@@ -1,0 +1,1846 @@
+fileFormatVersion: 2
+guid: 3d5e6b69f5a0a324194fe5087fb4edc5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1620829629877624823
+    second: Rpg hero sprite_0
+  - first:
+      213: -1710689753616231397
+    second: Rpg hero sprite_1
+  - first:
+      213: 8362760568799867121
+    second: Rpg hero sprite_2
+  - first:
+      213: 1429438058259367228
+    second: Rpg hero sprite_3
+  - first:
+      213: 3254347931107443662
+    second: Rpg hero sprite_4
+  - first:
+      213: -2839542406891357235
+    second: Rpg hero sprite_5
+  - first:
+      213: 295250173849917481
+    second: Rpg hero sprite_6
+  - first:
+      213: 6416172632715906859
+    second: Rpg hero sprite_7
+  - first:
+      213: -8585509115732607248
+    second: Rpg hero sprite_8
+  - first:
+      213: 3542519140729864539
+    second: Rpg hero sprite_9
+  - first:
+      213: 2284053980295774996
+    second: Rpg hero sprite_10
+  - first:
+      213: -2342023814739809171
+    second: Rpg hero sprite_11
+  - first:
+      213: -8727549492805554881
+    second: Rpg hero sprite_12
+  - first:
+      213: -1915992932913817070
+    second: Rpg hero sprite_13
+  - first:
+      213: 652553543642722350
+    second: Rpg hero sprite_14
+  - first:
+      213: 7091587422236401257
+    second: Rpg hero sprite_15
+  - first:
+      213: 2579318913227979341
+    second: Rpg hero sprite_16
+  - first:
+      213: 720574609752269113
+    second: Rpg hero sprite_17
+  - first:
+      213: -4884439511211417616
+    second: Rpg hero sprite_18
+  - first:
+      213: 7952849295564831876
+    second: Rpg hero sprite_19
+  - first:
+      213: 6802987580256937909
+    second: Rpg hero sprite_20
+  - first:
+      213: -6923964040091884736
+    second: Rpg hero sprite_21
+  - first:
+      213: 2906420351537848658
+    second: Rpg hero sprite_22
+  - first:
+      213: 6858465960281431882
+    second: Rpg hero sprite_23
+  - first:
+      213: 2032704081432392627
+    second: Rpg hero sprite_24
+  - first:
+      213: -3940147710488663998
+    second: Rpg hero sprite_25
+  - first:
+      213: -2848761248897263909
+    second: Rpg hero sprite_26
+  - first:
+      213: -8671726650847507143
+    second: Rpg hero sprite_27
+  - first:
+      213: -776723899285159019
+    second: Rpg hero sprite_28
+  - first:
+      213: 862711669618852068
+    second: Rpg hero sprite_29
+  - first:
+      213: -5569702592084557898
+    second: Rpg hero sprite_30
+  - first:
+      213: -6724858113163184208
+    second: Rpg hero sprite_31
+  - first:
+      213: -4893725475944471139
+    second: Rpg hero sprite_32
+  - first:
+      213: 4405990121185064507
+    second: Rpg hero sprite_33
+  - first:
+      213: -1914936449478783431
+    second: Rpg hero sprite_34
+  - first:
+      213: -2231858215579781163
+    second: Rpg hero sprite_35
+  - first:
+      213: -4304929647955601215
+    second: Rpg hero sprite_36
+  - first:
+      213: -3437542679836422791
+    second: Rpg hero sprite_37
+  - first:
+      213: -7084926129858427706
+    second: Rpg hero sprite_38
+  - first:
+      213: -1588937478800337592
+    second: Rpg hero sprite_39
+  - first:
+      213: 5044701361737455620
+    second: Rpg hero sprite_40
+  - first:
+      213: 5453354524774654154
+    second: Rpg hero sprite_41
+  - first:
+      213: 9028408175369156592
+    second: Rpg hero sprite_42
+  - first:
+      213: 4050609289561945383
+    second: Rpg hero sprite_43
+  - first:
+      213: -4701059148454367151
+    second: Rpg hero sprite_44
+  - first:
+      213: 1825310342492782979
+    second: Rpg hero sprite_45
+  - first:
+      213: 3738134241790812558
+    second: Rpg hero sprite_46
+  - first:
+      213: -3335393000791946264
+    second: Rpg hero sprite_47
+  - first:
+      213: 5197078657581015920
+    second: Rpg hero sprite_48
+  - first:
+      213: -8028004501466215940
+    second: Rpg hero sprite_49
+  - first:
+      213: 4001953133818145909
+    second: Rpg hero sprite_50
+  - first:
+      213: -6807512279867765926
+    second: Rpg hero sprite_51
+  - first:
+      213: 8586486918809714235
+    second: Rpg hero sprite_52
+  - first:
+      213: -1052528405324820384
+    second: Rpg hero sprite_53
+  - first:
+      213: 6058467833910326207
+    second: Rpg hero sprite_54
+  - first:
+      213: -149969802443662918
+    second: Rpg hero sprite_55
+  - first:
+      213: 2873688351336829614
+    second: Rpg hero sprite_56
+  - first:
+      213: 8511819729885517013
+    second: Rpg hero sprite_57
+  - first:
+      213: 4324595069372587423
+    second: Rpg hero sprite_58
+  - first:
+      213: -7809005259453481261
+    second: Rpg hero sprite_59
+  - first:
+      213: 123950623075494477
+    second: Rpg hero sprite_60
+  - first:
+      213: -5492475151045888378
+    second: Rpg hero sprite_61
+  - first:
+      213: -6332821179836860497
+    second: Rpg hero sprite_62
+  - first:
+      213: -3403081450408668332
+    second: Rpg hero sprite_63
+  - first:
+      213: -6870559537979205698
+    second: Rpg hero sprite_64
+  - first:
+      213: 6674653552984317513
+    second: Rpg hero sprite_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rpg hero sprite_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 783
+        width: 121
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90067b50a08a189e0800000000000000
+      internalID: -1620829629877624823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 763
+        width: 134
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14ddc29bb86248e0800000000000000
+      internalID: -1710689753616231397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_2
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 753
+        width: 121
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f0b5f4fd6e7e0470800000000000000
+      internalID: 8362760568799867121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_3
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 743
+        width: 134
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3549fa275266d310800000000000000
+      internalID: 1429438058259367228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 753
+        width: 133
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3cf297334c92d20800000000000000
+      internalID: 3254347931107443662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_5
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 781
+        width: 132
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb3598b93be798d0800000000000000
+      internalID: -2839542406891357235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_6
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 775
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92852340870f81400800000000000000
+      internalID: 295250173849917481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_7
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 753
+        width: 133
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f4d9ed303da0950800000000000000
+      internalID: 6416172632715906859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_8
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 727
+        width: 138
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe31ec72f42ad880800000000000000
+      internalID: -8585509115732607248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_9
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 775
+        width: 145
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51c931b36e892130800000000000000
+      internalID: 3542519140729864539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_10
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 781
+        width: 145
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413c85f5ef692bf10800000000000000
+      internalID: 2284053980295774996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 145
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6cade2cfb57f7fd0800000000000000
+      internalID: -2342023814739809171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_12
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 759
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d2fa11af381e680800000000000000
+      internalID: -8727549492805554881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_13
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 750
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a538134960965e0800000000000000
+      internalID: -1915992932913817070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_14
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 751
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e203fb59df55e0900800000000000000
+      internalID: 652553543642722350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 754
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e570c00316a6260800000000000000
+      internalID: 7091587422236401257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_16
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 753
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a7661c2e49bc320800000000000000
+      internalID: 2579318913227979341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_17
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 751
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93123703acefff900800000000000000
+      internalID: 720574609752269113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_18
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 572
+        width: 137
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff5c57b42cf63cb0800000000000000
+      internalID: -4884439511211417616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_19
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 753
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c7b5e5c423e5e60800000000000000
+      internalID: 7952849295564831876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 526
+        width: 153
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7eb941921196e50800000000000000
+      internalID: 6802987580256937909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_21
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 531
+        width: 121
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043aeb8e36329ef90800000000000000
+      internalID: -6923964040091884736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 545
+        width: 117
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251216d29eda55820800000000000000
+      internalID: 2906420351537848658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_23
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 537
+        width: 143
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fdea2047a2e2f50800000000000000
+      internalID: 6858465960281431882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_24
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 571
+        width: 137
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3b343a79d953c10800000000000000
+      internalID: 2032704081432392627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_25
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 535
+        width: 131
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24821c97888c159c0800000000000000
+      internalID: -3940147710488663998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_26
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 572
+        width: 125
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6949dccba2778d0800000000000000
+      internalID: -2848761248897263909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_27
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 529
+        width: 157
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d42fa4e86d7a780800000000000000
+      internalID: -8671726650847507143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_28
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 737
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5934d869ab58835f0800000000000000
+      internalID: -776723899285159019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_29
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 537
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0473351b7f8fb00800000000000000
+      internalID: 862711669618852068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_30
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 529
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf3a36800174b2b0800000000000000
+      internalID: -5569702592084557898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_31
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 541
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b731080d218ca2a0800000000000000
+      internalID: -6724858113163184208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_32
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 342
+        width: 138
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95ec029b9ef51cb0800000000000000
+      internalID: -4893725475944471139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_33
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 299
+        width: 151
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36bd19dba8352d30800000000000000
+      internalID: 4405990121185064507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_34
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 327
+        width: 133
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e8e59e177cc65e0800000000000000
+      internalID: -1914936449478783431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_35
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 329
+        width: 119
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7745f17c8d601e0800000000000000
+      internalID: -2231858215579781163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_36
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 303
+        width: 139
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c81f8e2b41d144c0800000000000000
+      internalID: -4304929647955601215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_37
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 293
+        width: 151
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d0b1445256b40d0800000000000000
+      internalID: -3437542679836422791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_38
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 497
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4c7e1f8394dad90800000000000000
+      internalID: -7084926129858427706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_39
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 297
+        width: 125
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8451dc518c5f2f9e0800000000000000
+      internalID: -1588937478800337592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_40
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 499
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4085a481921620640800000000000000
+      internalID: 5044701361737455620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_41
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 305
+        width: 135
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac066731c053eab40800000000000000
+      internalID: 5453354524774654154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_42
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 325
+        width: 153
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f77c14a6695b4d70800000000000000
+      internalID: 9028408175369156592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_43
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 335
+        width: 107
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725bc3410b7a63830800000000000000
+      internalID: 4050609289561945383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_44
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 340
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150f64c9c9b72ceb0800000000000000
+      internalID: -4701059148454367151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 21
+        width: 145
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3810129e51ec45910800000000000000
+      internalID: 1825310342492782979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_46
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 293
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e816aa4994580e330800000000000000
+      internalID: 3738134241790812558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_47
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 305
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ebc879ccbd46b1d0800000000000000
+      internalID: -3335393000791946264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_48
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 297
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07361e6f08bbf1840800000000000000
+      internalID: 5197078657581015920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_49
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 285
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf98edaa07cc69090800000000000000
+      internalID: -8028004501466215940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_50
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 33
+        width: 149
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57cedf40c2bc98730800000000000000
+      internalID: 4001953133818145909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_51
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 107
+        width: 121
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b4f5236abd681a0800000000000000
+      internalID: -6807512279867765926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_52
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 23
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ef0380c54592770800000000000000
+      internalID: 8586486918809714235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 39
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0601b9cedfaa461f0800000000000000
+      internalID: -1052528405324820384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_54
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 96
+        width: 129
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3fa535560041450800000000000000
+      internalID: 6058467833910326207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_55
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 59
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab95f4e52433bedf0800000000000000
+      internalID: -149969802443662918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_56
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 31
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea21c90845461e720800000000000000
+      internalID: 2873688351336829614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_57
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 39
+        width: 133
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4dcff52fe002670800000000000000
+      internalID: 8511819729885517013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_58
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 0
+        width: 193
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ddb5b8d4c040c30800000000000000
+      internalID: 4324595069372587423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_59
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 79
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de3e152717d0a390800000000000000
+      internalID: -7809005259453481261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_60
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 79
+        width: 125
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a6a1a5f6c58b100800000000000000
+      internalID: 123950623075494477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_61
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 23
+        width: 97
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686ff3453fec6c3b0800000000000000
+      internalID: -5492475151045888378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_62
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 101
+        width: 151
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa7f0cd80bc4d18a0800000000000000
+      internalID: -6332821179836860497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_63
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 124
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4539bae7373d5c0d0800000000000000
+      internalID: -3403081450408668332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_64
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 97
+        width: 132
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7d392808ed6a0a0800000000000000
+      internalID: -6870559537979205698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rpg hero sprite_65
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 22
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94edd68ea0221ac50800000000000000
+      internalID: 6674653552984317513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rpg hero sprite_0: -1620829629877624823
+      Rpg hero sprite_1: -1710689753616231397
+      Rpg hero sprite_10: 2284053980295774996
+      Rpg hero sprite_11: -2342023814739809171
+      Rpg hero sprite_12: -8727549492805554881
+      Rpg hero sprite_13: -1915992932913817070
+      Rpg hero sprite_14: 652553543642722350
+      Rpg hero sprite_15: 7091587422236401257
+      Rpg hero sprite_16: 2579318913227979341
+      Rpg hero sprite_17: 720574609752269113
+      Rpg hero sprite_18: -4884439511211417616
+      Rpg hero sprite_19: 7952849295564831876
+      Rpg hero sprite_2: 8362760568799867121
+      Rpg hero sprite_20: 6802987580256937909
+      Rpg hero sprite_21: -6923964040091884736
+      Rpg hero sprite_22: 2906420351537848658
+      Rpg hero sprite_23: 6858465960281431882
+      Rpg hero sprite_24: 2032704081432392627
+      Rpg hero sprite_25: -3940147710488663998
+      Rpg hero sprite_26: -2848761248897263909
+      Rpg hero sprite_27: -8671726650847507143
+      Rpg hero sprite_28: -776723899285159019
+      Rpg hero sprite_29: 862711669618852068
+      Rpg hero sprite_3: 1429438058259367228
+      Rpg hero sprite_30: -5569702592084557898
+      Rpg hero sprite_31: -6724858113163184208
+      Rpg hero sprite_32: -4893725475944471139
+      Rpg hero sprite_33: 4405990121185064507
+      Rpg hero sprite_34: -1914936449478783431
+      Rpg hero sprite_35: -2231858215579781163
+      Rpg hero sprite_36: -4304929647955601215
+      Rpg hero sprite_37: -3437542679836422791
+      Rpg hero sprite_38: -7084926129858427706
+      Rpg hero sprite_39: -1588937478800337592
+      Rpg hero sprite_4: 3254347931107443662
+      Rpg hero sprite_40: 5044701361737455620
+      Rpg hero sprite_41: 5453354524774654154
+      Rpg hero sprite_42: 9028408175369156592
+      Rpg hero sprite_43: 4050609289561945383
+      Rpg hero sprite_44: -4701059148454367151
+      Rpg hero sprite_45: 1825310342492782979
+      Rpg hero sprite_46: 3738134241790812558
+      Rpg hero sprite_47: -3335393000791946264
+      Rpg hero sprite_48: 5197078657581015920
+      Rpg hero sprite_49: -8028004501466215940
+      Rpg hero sprite_5: -2839542406891357235
+      Rpg hero sprite_50: 4001953133818145909
+      Rpg hero sprite_51: -6807512279867765926
+      Rpg hero sprite_52: 8586486918809714235
+      Rpg hero sprite_53: -1052528405324820384
+      Rpg hero sprite_54: 6058467833910326207
+      Rpg hero sprite_55: -149969802443662918
+      Rpg hero sprite_56: 2873688351336829614
+      Rpg hero sprite_57: 8511819729885517013
+      Rpg hero sprite_58: 4324595069372587423
+      Rpg hero sprite_59: -7809005259453481261
+      Rpg hero sprite_6: 295250173849917481
+      Rpg hero sprite_60: 123950623075494477
+      Rpg hero sprite_61: -5492475151045888378
+      Rpg hero sprite_62: -6332821179836860497
+      Rpg hero sprite_63: -3403081450408668332
+      Rpg hero sprite_64: -6870559537979205698
+      Rpg hero sprite_65: 6674653552984317513
+      Rpg hero sprite_7: 6416172632715906859
+      Rpg hero sprite_8: -8585509115732607248
+      Rpg hero sprite_9: 3542519140729864539
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
