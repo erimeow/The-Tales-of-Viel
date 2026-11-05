@@ -28,7 +28,6 @@ public class PlayerMovementArcher : MonoBehaviour
     private bool isDead = false;
     private float facingDirection = 1f;
 
-    public float gameOverDelay = 2f;
 
     //hit villager
     [Header("Villager Damage")]
@@ -44,7 +43,8 @@ public class PlayerMovementArcher : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        health = maxHealth;
+        health = gameManager.instance?.TakeCarriedHealth(gameObject.scene.buildIndex, maxHealth) ?? maxHealth;
+        PlayerHealthHud.Attach(healthBar);
 
         // Initialize health bar
         if (healthBar != null)
@@ -80,11 +80,31 @@ public class PlayerMovementArcher : MonoBehaviour
         }
     }
 
+    public bool IsDead => isDead;
+
+    internal bool TryHeal(float amount)
+    {
+        if (isDead || health <= 0f || health >= maxHealth || amount <= 0f)
+            return false;
+
+        health = Mathf.Min(maxHealth, health + amount);
+        if (healthBar != null)
+            healthBar.value = health;
+        return true;
+    }
+
     void Update()
     {
         if (isDead) return;
 
         // Player movement input
+        if (PlayerWeaponLoadout.BlocksInput(rb))
+        {
+            horizontal = vertical = 0;
+            anim?.SetBool("IsRunning", false);
+            return;
+        }
+
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -117,6 +137,12 @@ public class PlayerMovementArcher : MonoBehaviour
     void FixedUpdate()
     {
         if (rb == null || isDead) return;
+
+        if (PlayerWeaponLoadout.BlocksInput(rb))
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
 
         // Unity 6 Rigidbody2D movement
         rb.linearVelocity = new Vector2(
@@ -158,6 +184,18 @@ public class PlayerMovementArcher : MonoBehaviour
         if (bulletScript != null)
         {
             bulletScript.SetDirection(facingDirection);
+            gameManager wallet = gameManager.instance;
+            if (wallet != null)
+            {
+                int tier = wallet.EquippedWeapon(CharacterRole.Archer);
+                bulletScript.damage += wallet.WeaponBonus(CharacterRole.Archer);
+                if (tier > 0 && newBullet.TryGetComponent<SpriteRenderer>(out var arrowRenderer))
+                {
+                    Sprite arrow = Resources.Load<Sprite>(WeaponShopCatalog.ArtPath(CharacterRole.Archer, tier, "Arrow"));
+                    if (arrow != null)
+                        arrowRenderer.sprite = arrow;
+                }
+            }
         }
         else
         {
@@ -210,63 +248,27 @@ public class PlayerMovementArcher : MonoBehaviour
         Debug.Log("Archer Health: " + health);
 
         if (health <= 0f)
-        {
-            isDead = true;  
-            rb.linearVelocity = Vector2.zero;
-
-
-            CancelInvoke(nameof(ReloadGun));
-
-            anim.SetBool("IsDying", true);
-
-            
-            gameManager.instance.playSFX(deathSFX, 1, transform);
-
-            if (gameManager.instance != null)
-            {
-                gameManager.instance.ResetGame();
-            }
-
-
-            Invoke(nameof(ShowGameOver), gameOverDelay);
-
-            Destroy(gameObject, gameOverDelay);
-
-        }
+            Die();
     }
 
    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Barrier"))
-        {
-            rb.linearVelocity = Vector2.zero;
-
-            
-            gameManager.instance.playSFX(deathSFX,1, transform);
-            Destroy(gameObject);
-            gameOverPanel.SetActive(true) ;
-
-            if (gameManager.instance != null)
-            {
-                gameManager.instance.ResetGame();
-            }
-        }
+        if (collision.CompareTag("Barrier"))
+            Die();
     }
 
-    private void ShowGameOver()
+    private void Die()
     {
-        if (gameOverPanel != null)
-        {
-            gameOverPanel.SetActive(true);
+        if (isDead)
+            return;
 
-        }
-        else
-        {
-            Debug.LogWarning("Game Over Panel is not assigned!");
-        }
+        isDead = true;
+        health = 0;
+        if (healthBar != null)
+            healthBar.value = 0;
+        CancelInvoke(nameof(ReloadGun));
+        DeathPresentation.Player(this, rb, anim, "Archer_die", gameOverPanel, deathSFX);
     }
-
-
 }

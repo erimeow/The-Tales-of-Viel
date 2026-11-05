@@ -28,6 +28,67 @@ public class QuestionManager : MonoBehaviour
     private bool dialogueStarted = false;
 
     public WelcomeDialogue welcomeDialogue;
+    internal event System.Action Completed;
+    private NpcDialogueView conversation;
+    private string selectedReply;
+    private bool offeringReview;
+    internal bool HasCompleted => qtsData != null && !string.IsNullOrEmpty(qtsData.completionKey) &&
+        PlayerPrefs.GetInt(qtsData.completionKey) == 1;
+
+    internal void PrepareConversation(SpriteRenderer speaker)
+    {
+        if (speaker == null || qtsData == null || string.IsNullOrEmpty(qtsData.speakerName))
+            return;
+
+        if (welcomeDialogue.welcomePanel != null)
+            welcomeDialogue.welcomePanel.SetActive(false);
+        conversation ??= new NpcDialogueView(transform, qtsData.speakerName, speaker.sprite, SelectConversationReply);
+    }
+
+    private void ShowConversationTopic()
+    {
+        var topic = qtsData.questions[currentQuestion];
+        selectedReply = null;
+        conversation.Show(topic.questionText, topic.replies);
+    }
+
+    private void SelectConversationReply(int replyIndex)
+    {
+        if (offeringReview)
+        {
+            offeringReview = false;
+            if (replyIndex == 0)
+                ShowConversationTopic();
+            else
+            {
+                conversation.Close();
+                EndQuestion();
+            }
+            return;
+        }
+
+        var topic = qtsData.questions[currentQuestion];
+        if (selectedReply == null && topic.followUps != null && replyIndex < topic.followUps.Length)
+        {
+            selectedReply = topic.replies[replyIndex];
+            conversation.Show(topic.followUps[replyIndex], new[] { "Continue" }, selectedReply);
+            return;
+        }
+
+        if (++currentQuestion < qtsData.questions.Length)
+        {
+            ShowConversationTopic();
+            return;
+        }
+
+        conversation.Close();
+        if (!string.IsNullOrEmpty(qtsData.completionKey))
+        {
+            PlayerPrefs.SetInt(qtsData.completionKey, 1);
+            PlayerPrefs.Save();
+        }
+        EndQuestion();
+    }
 
     private void Awake()
     {
@@ -78,6 +139,19 @@ public class QuestionManager : MonoBehaviour
         {
             Debug.LogError(
                 "QuestionManager: No question data available!", this);
+            return;
+        }
+
+        if (conversation != null)
+        {
+            dialogueStarted = true;
+            currentQuestion = 0;
+            offeringReview = HasCompleted;
+            if (offeringReview)
+                conversation.Show("Welcome back, adventurer. Want to go over the basics again?",
+                    new[] { "Review the tutorial", "I'll be on my way" });
+            else
+                ShowConversationTopic();
             return;
         }
 
@@ -312,6 +386,7 @@ public class QuestionManager : MonoBehaviour
         if (welcomeDialogue != null)
             welcomeDialogue.ResumePlayer();
 
+        Completed?.Invoke();
         Debug.Log("Quiz Finished!");
     }
 }

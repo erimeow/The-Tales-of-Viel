@@ -6,7 +6,19 @@ public class Skeleton : MonoBehaviour
     [Header("Enemy Settings")]
     public float moveSpeed = 2f;
     public float health = 100f;
+    internal event System.Action Defeated;
     public float damage = 10f;
+    [SerializeField] private Coin coinDrop;
+    [SerializeField] private string bossName;
+    [SerializeField] private GameObject sceneTwoVisual;
+    private float maxHealth;
+    private HealthbarBehaviour existingBar;
+    private TargetHealthHud healthHud;
+    private EnemyAppearance appearance;
+    private DragonAppearance dragon;
+    private bool mutant;
+
+    internal void UseMutantAppearance() => mutant = true;
 
     [Header("Chasing Settings")]
     public LayerMask obstacleLayer;
@@ -50,6 +62,37 @@ public class Skeleton : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         skeletonCollider = GetComponent<Collider2D>();
+        bool boss = !string.IsNullOrEmpty(bossName);
+        string sceneName = gameObject.scene.name;
+        bool themedScene = sceneName == "SampleScene" || sceneName == "Scene 2";
+        bool armored = health >= 135 || (health >= 100 && Mathf.FloorToInt(transform.position.x / 8f) % 2 != 0);
+        if (maxHealth <= 0f)
+        {
+            if (themedScene && !boss && armored && health < 135)
+                health += 15;
+            maxHealth = health;
+        }
+
+        existingBar = GetComponentInChildren<HealthbarBehaviour>(true);
+        if (existingBar != null)
+            existingBar.SetHealth(health, maxHealth);
+
+        if (boss && sceneName == "Scene 2")
+        {
+            bossName = "Emberwing";
+            dragon = new DragonAppearance(transform);
+        }
+        else if (boss && sceneName == "SampleScene")
+        {
+            bossName = "The Hollow Widow";
+            dragon = new DragonAppearance(transform, "HollowWidow", "Hollow Widow art", .12f);
+        }
+        else if (!boss && mutant)
+        {
+            dragon = new DragonAppearance(transform, "DreamMutant", "Dream Mutant art", .08f);
+        }
+        else if (!boss && sceneName == "Scene 2" && sceneTwoVisual != null)
+            appearance = new EnemyAppearance(transform, sceneTwoVisual, armored);
 
         //Hitpoints = MaxHitpoints;
         //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
@@ -72,6 +115,19 @@ public class Skeleton : MonoBehaviour
         }
 
         FindPlayer();
+    }
+
+    private void OnDestroy()
+    {
+        if (healthHud != null && !string.IsNullOrEmpty(bossName))
+            Destroy(healthHud.gameObject);
+    }
+
+    private void LateUpdate()
+    {
+        bool running = rb != null && rb.linearVelocity.sqrMagnitude > .01f;
+        appearance?.Show(running, isAttacking, isDead);
+        dragon?.Show(running, isAttacking, isDead);
     }
 
     void FindPlayer()
@@ -277,6 +333,12 @@ public class Skeleton : MonoBehaviour
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
 
+        if (!string.IsNullOrEmpty(bossName) && healthHud == null)
+        {
+            healthHud = TargetHealthHud.Create(transform, 1.15f, bossName);
+            healthHud.SetHealth(health, maxHealth);
+        }
+
         anim.SetBool("IsRunning", false);
         anim.SetBool("IsAttacking", true);
     }
@@ -312,7 +374,16 @@ public class Skeleton : MonoBehaviour
         if (isDead)
             return;
 
-        health -= damageAmount;
+        if (maxHealth <= 0f)
+            maxHealth = health;
+        health = Mathf.Max(0f, health - damageAmount);
+        if (existingBar != null)
+            existingBar.SetHealth(health, maxHealth);
+        else if (health > 0 && health < maxHealth && healthHud == null)
+            healthHud = TargetHealthHud.Create(transform, 1.15f, bossName);
+
+        if (healthHud != null)
+            healthHud.SetHealth(health, maxHealth);
         //Healthbar.SetHealth(Hitpoints,MaxHitpoints)
 
         Debug.Log("Skeleton Health: " + health);
@@ -329,6 +400,12 @@ public class Skeleton : MonoBehaviour
 
         isDead = true;
         isAttacking = false;
+        health = 0;
+        Defeated?.Invoke();
+        if (existingBar != null)
+            existingBar.SetHealth(health, maxHealth);
+        if (healthHud != null)
+            healthHud.SetHealth(health, maxHealth);
 
         targetPlayer = null;
         player = null;
@@ -348,15 +425,17 @@ public class Skeleton : MonoBehaviour
         {
             anim.SetBool("IsRunning", false);
             anim.SetBool("IsAttacking", false);
-            anim.SetBool("IsDying", true);
-
-            anim.Update(0f);
+            DeathPresentation.Play(anim, "Warrior die", "Skeleton_Dying");
         }
 
+        appearance?.BeginDeath();
         Debug.Log("Skeleton death animation started.", this);
 
-        //sound
-        gameManager.instance.playSFX(deathSFX, 1, transform);
+        if (coinDrop != null)
+            Instantiate(coinDrop, transform.position, Quaternion.identity).PlayDropEffect();
+
+        if (deathSFX != null && gameManager.instance != null)
+            gameManager.instance.playSFX(deathSFX, 1, transform);
 
         Destroy(gameObject, deathDestroyDelay);
     }

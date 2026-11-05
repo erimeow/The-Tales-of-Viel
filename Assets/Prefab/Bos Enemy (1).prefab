@@ -2816,13 +2816,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skeleton
   moveSpeed: 1.5
-  health: 100
+  health: 1250
+  bossName: Gravebound Tyrant
   damage: 10
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
   obstacleCheckDistance: 0.6
   showObstacleLogs: 1
+  coinDrop: {fileID: 5186537566060979244, guid: abaf505b44245af4abec55e81cb85ff3, type: 3}
 --- !u!58 &2542327285439852328
 CircleCollider2D:
   m_ObjectHideFlags: 0

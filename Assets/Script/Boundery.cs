@@ -15,7 +15,8 @@ public class Boundery : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (gameOver)
+        // The playable characters handle their own animation and Game Over timing.
+        if (other.TryGetComponent<PlayerWeaponLoadout>(out _) || gameOver)
             return;
 
         if (other.CompareTag("Player"))

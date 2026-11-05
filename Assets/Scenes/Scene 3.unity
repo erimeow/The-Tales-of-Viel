@@ -6342,6 +6342,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.18019962, y: 0.1391499}
   m_EdgeRadius: 0
+--- !u!212 &8399760309156147151 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3272058278318537221, guid: e53fb05b371160d4cb77b543f4cec663, type: 3}
+  m_PrefabInstance: {fileID: 5835292813330487453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1318983332 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8324260537153894524, guid: e53fb05b371160d4cb77b543f4cec663, type: 3}
@@ -85082,6 +85087,9 @@ MonoBehaviour:
   welcomePanel: {fileID: 7383850493478509737}
   questionManager: {fileID: 3335278052965331342}
   playerManager: {fileID: 0}
+  journalPage: 1
+  journalFont: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
+  journalPaper: {fileID: 21300000, guid: ffac7e0b474194ffd90e3892b95dbac8, type: 3}
 --- !u!224 &919200437623261497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -85381,7 +85389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skeleton
   moveSpeed: 2
-  health: 100
+  health: 125
   damage: 10
   obstacleLayer:
     serializedVersion: 2
@@ -85390,6 +85398,7 @@ MonoBehaviour:
   showObstacleLogs: 1
   deathDestroyDelay: 3
   deathSFX: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
+  coinDrop: {fileID: 5186537566060979244, guid: abaf505b44245af4abec55e81cb85ff3, type: 3}
 --- !u!114 &4955228435788315262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85678,6 +85687,10 @@ PrefabInstance:
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 299446814}
+    - target: {fileID: 8324260537153894524, guid: e53fb05b371160d4cb77b543f4cec663, type: 3}
+      propertyPath: speaker
+      value: 
+      objectReference: {fileID: 8399760309156147151}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

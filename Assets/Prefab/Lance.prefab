@@ -164,7 +164,6 @@ MonoBehaviour:
   attackRange: 1.2
   attackDamage: 20
   gameOverPanel: {fileID: 0}
-  gameOverDelay: 2
   villagerDamageToPlayer: 10
   attackSFX: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
   deathSFX: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}

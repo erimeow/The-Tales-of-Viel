@@ -6,6 +6,10 @@ public class Enemy : MonoBehaviour
     public float health = 100f;
     int direction = -1;
     public float damage = 10f;
+    [SerializeField] private Coin coinDrop;
+    private bool isDead;
+    private float maxHealth;
+    private TargetHealthHud healthHud;
 
     Rigidbody2D rb;
     Animator anim;
@@ -19,6 +23,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        maxHealth = health;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -66,6 +71,9 @@ public class Enemy : MonoBehaviour
     }
     public void DealDamage()
     {
+        if (isDead)
+            return;
+
         if (player != null)
         {
             player.TakeDamage(damage);
@@ -78,6 +86,9 @@ public class Enemy : MonoBehaviour
     }
     void StopAttack()
     {
+        if (isDead)
+            return;
+
         isAttacking = false;
 
         anim.SetBool("IsAttacking", false);
@@ -86,16 +97,29 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        if (isDead)
+            return;
+
+        if (maxHealth <= 0f)
+            maxHealth = health;
+        health = Mathf.Max(0, health - damage);
+        if (health > 0 && health < maxHealth && healthHud == null)
+            healthHud = TargetHealthHud.Create(transform, 1.05f, null);
+        if (healthHud != null)
+            healthHud.SetHealth(health, maxHealth);
 
         Debug.Log("Skeleton Health: " + health);
 
         if (health <= 0)
         {
+            isDead = true;
+            if (coinDrop != null)
+                Instantiate(coinDrop, transform.position, Quaternion.identity).PlayDropEffect();
+
             isAttacking = true;
             anim.SetBool("IsRunning", false);
             anim.SetBool("IsAttacking", false);
-            anim.SetBool("IsDying", true);
+            DeathPresentation.Play(anim, "Warrior die", "Skeleton_Dying");
 
             Destroy(gameObject, 1f);
 

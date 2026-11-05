@@ -12,38 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755d144cd715dea4e8cde37d58fbc5ca, type: 3}
   m_Name: NPC
   m_EditorClassIdentifier: Assembly-CSharp::QtsData
+  speakerName: Alden
+  completionKey: Viel.Npc.AldenTutorialComplete
   questions:
-  - questionText: Ah Youre Finally awake. this place isn't safe, you know. if you
-      want to survive, you'll have to learn how to take care of your self
+  - questionText: "Welcome, adventurer! You've awakened in a strange place. This is the beginning of your journey."
     replies:
-    - Where am I?
-    correctReplyIndex: 0
-  - questionText: Somewhere far from the safety you're used to. Don't worry. I'll
-      teach you what you need to know. After that, you'll have to survive on your
-      own
+    - "Where am I?"
+    - "What should I do here?"
+    followUps:
+    - "You're in a peaceful starting area. This is where your journey begins before you enter the world ahead."
+    - "Take your time to prepare yourself. You'll soon explore new places, gather resources, and face different challenges."
+  - questionText: "Before you leave, let me teach you how to move around."
     replies:
-    - Okay! Teach me.
-    correctReplyIndex: 0
-  - questionText: First learn the movement controls so you can navigate the world
+    - "How do I move?"
+    - "I'm ready to learn."
+    followUps:
+    - "Use the W, A, S, and D keys on your keyboard. W moves you up, A moves you left, S moves you down, and D moves you right."
+    - "Excellent! Remember these keys: W to move up, A to move left, S to move down, and D to move right."
+  - questionText: "Knowing how to move is important, but you'll also need to defend yourself during your journey."
     replies:
-    - ...
-    correctReplyIndex: 0
-  - questionText: Use WASD to move your character and click the right mouse to attack
-      enemies
+    - "How do I attack?"
+    - "What button should I use?"
+    followUps:
+    - "Use the RIGHT MOUSE BUTTON to perform an attack. Remember, it's the right-click button, not the left-click button."
+    - "Simply press the RIGHT MOUSE BUTTON to attack. Keep that in mind when facing danger."
+  - questionText: "Now you know the basic controls you'll need for your journey."
     replies:
-    - Okay got it!
-    correctReplyIndex: 0
-  - questionText: Collect meat and coins from your surrounding. you can use them
-      to buy items from the shop
-    replies:
-    - Alright!
-    correctReplyIndex: 0
-  - questionText: Beware of enemies they can attack you, so be ready to fight
-    replies:
-    - Okay thanks!
-    correctReplyIndex: 0
-  - questionText: You've proven yourself ready for the next stage. keep going and
-      good luck on your journey!
-    replies:
-    - Thank you! Im ready!
-    correctReplyIndex: 0
+    - "Thank you for your help!"
+    - "I'm ready to continue."
+    followUps:
+    - "You're welcome, adventurer! Stay alert and take care of yourself."
+    - "That's the spirit! Prepare yourself and good luck on your journey!"

@@ -1,0 +1,4 @@
+LPC Spider artwork by Stephen "Redshrike" Challener, with contributor William.Thompsonj.
+Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Cropped and imported individual animation frames for Unity.
+https://opengameart.org/content/lpc-spider

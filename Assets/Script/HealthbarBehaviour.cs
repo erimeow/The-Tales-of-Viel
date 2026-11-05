@@ -30,18 +30,17 @@ public class HealthbarBehaviour : MonoBehaviour
         if (Slider == null)
             return;
 
+        if (fillImage == null && Slider.fillRect != null)
+            fillImage = Slider.fillRect.GetComponent<Image>();
+
         Slider.maxValue = maxHealth;
         Slider.value = health;
 
-        Slider.gameObject.SetActive(health < maxHealth);
+        Slider.gameObject.SetActive(health > 0 && health < maxHealth);
 
         if (fillImage != null)
         {
-            fillImage.color = Color.Lerp(
-                Low,
-                High,
-                Slider.normalizedValue
-            );
+            fillImage.color = HudArt.HealthColor(Slider.normalizedValue);
         }
     }
 }

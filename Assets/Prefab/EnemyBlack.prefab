@@ -588,6 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd418f2b4b0c7e24aa90ead971613840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skeleton
+  sceneTwoVisual: {fileID: 1505905564021469714, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
   moveSpeed: 2
   damage: 10
   obstacleLayer:
@@ -600,3 +601,5 @@ MonoBehaviour:
   Hitpoints: 100
   MaxHitpoints: 100
   Healthbar: {fileID: 8551506617452564557}
+  health: 140
+  coinDrop: {fileID: 5186537566060979244, guid: abaf505b44245af4abec55e81cb85ff3, type: 3}

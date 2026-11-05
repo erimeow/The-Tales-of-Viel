@@ -12,8 +12,7 @@ public class Block : MonoBehaviour
         if (collision.gameObject.CompareTag("Barrier"))
         {
             anim.SetBool("IsDying", true);
-            
-            Destroy(gameObject,1f);
+            Destroy(gameObject, 1f);
         }
     }
 }

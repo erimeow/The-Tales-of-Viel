@@ -12,12 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755d144cd715dea4e8cde37d58fbc5ca, type: 3}
   m_Name: NPC2
   m_EditorClassIdentifier: Assembly-CSharp::QtsData
+  speakerName: Rowan
+  completionKey: 
   questions:
-  - questionText: Welcome to shop
+  - questionText: "Well, hello there, adventurer! Welcome to my humble shop."
     replies:
-    - thanks
-    correctReplyIndex: 0
-  - questionText: trade your gold coin for attk damage and health
+    - "Continue"
+  - questionText: "You'll be traveling to a dangerous place soon, so it's best to prepare before you leave."
     replies:
-    - ok
-    correctReplyIndex: 0
+    - "Continue"
+  - questionText: "I see you've collected some coins and meat during your journey."
+    replies:
+    - "Continue"
+  - questionText: "Keep them safe! You'll need both resources in the next stage."
+    replies:
+    - "Continue"
+  - questionText: "Coins and meat can be used to purchase weapon upgrades to make your attacks stronger."
+    replies:
+    - "Continue"
+  - questionText: "You can also use them to buy food that will help restore your health when you need it."
+    replies:
+    - "Continue"
+  - questionText: "Take a look at my available items. Choose wisely, and make sure you have enough resources before purchasing."
+    replies:
+    - "Continue"
+  - questionText: "Remember, a well-prepared adventurer has a better chance of surviving."
+    replies:
+    - "Continue"
+  - questionText: "That's all for now! Come back anytime if you need supplies. Good luck on your journey!"
+    replies:
+    - "Finish"

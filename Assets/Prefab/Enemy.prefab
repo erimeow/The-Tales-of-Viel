@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e3665d45e36404395b18491459e46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  health: 125
+  coinDrop: {fileID: 5186537566060979244, guid: abaf505b44245af4abec55e81cb85ff3, type: 3}
 --- !u!50 &8871477833187424339
 Rigidbody2D:
   serializedVersion: 5

@@ -280,7 +280,6 @@ MonoBehaviour:
   attackPoint: {fileID: 647473956315132497}
   attackRange: 1.2
   attackDamage: 20
-  gameOverDelay: 2
   gameOverPanel: {fileID: 0}
   villagerDamageToPlayer: 10
   attackSFX: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}

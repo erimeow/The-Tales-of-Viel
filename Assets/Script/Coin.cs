@@ -4,25 +4,25 @@ public class Coin : MonoBehaviour
 {
     public GameObject collectedParticles;
     public AudioClip collectSFX;
-    void Start()
+    private bool collected;
+
+    public void PlayDropEffect()
     {
-        
+        if (collectedParticles != null)
+            Destroy(Instantiate(collectedParticles, transform.position, Quaternion.identity), 0.6f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            gameManager.instance.playSFX(collectSFX, 1, transform);
-            GameObject p = Instantiate(collectedParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Destroy(p, .60f);
-            gameManager.instance.coinCollected += 1;
-        }
+        var wallet = gameManager.instance;
+        if (collected || !collision.CompareTag("Player") || wallet == null)
+            return;
+
+        collected = true;
+        wallet.coinCollected++;
+        if (collectSFX != null)
+            wallet.playSFX(collectSFX, 1, transform);
+        PlayDropEffect();
+        Destroy(gameObject);
     }
 }

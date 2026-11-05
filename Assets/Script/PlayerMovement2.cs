@@ -17,8 +17,8 @@ public class PlayerMovement2 : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public float attackDamage = 20f;
+    private readonly System.Collections.Generic.HashSet<Component> hitTargets = new();
 
-    public float gameOverDelay;
     bool isDead = false;
 
     public GameObject gameOverPanel;
@@ -36,15 +36,43 @@ public class PlayerMovement2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        health = maxHealth;
+        health = gameManager.instance?.TakeCarriedHealth(gameObject.scene.buildIndex, maxHealth) ?? maxHealth;
+        PlayerHealthHud.Attach(healthBar);
 
-        healthBar.maxValue = maxHealth;
-        healthBar.value = health;
+        if (healthBar != null)
+        {
+            healthBar.maxValue = maxHealth;
+            healthBar.value = health;
+        }
 
+    }
+
+    public bool IsDead => isDead;
+
+    internal bool TryHeal(float amount)
+    {
+        if (isDead || health <= 0f || health >= maxHealth || amount <= 0f)
+            return false;
+
+        health = Mathf.Min(maxHealth, health + amount);
+        if (healthBar != null)
+            healthBar.value = health;
+        return true;
     }
 
     void Update()
     {
+        if (isDead)
+            return;
+
+        if (PlayerWeaponLoadout.BlocksInput(rb))
+        {
+            horizontal = vertical = 0;
+            anim?.SetBool("IsRunning", false);
+            anim?.SetBool("IsGuarding", false);
+            return;
+        }
+
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -80,6 +108,15 @@ public class PlayerMovement2 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDead)
+            return;
+
+        if (PlayerWeaponLoadout.BlocksInput(rb))
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         rb.linearVelocityX = horizontal * moveSpeed;
         rb.linearVelocityY = vertical * moveSpeed;
     }
@@ -106,24 +143,18 @@ public class PlayerMovement2 : MonoBehaviour
             attackRange
         );
 
+        hitTargets.Clear();
         foreach (Collider2D enemy in enemies)
         {
             if (enemy.CompareTag("Enemy"))
             {
-                Skeleton skeleton = enemy.GetComponent<Skeleton>();
-
-                if (skeleton != null)
-                {
-                    //this is from global variable which is naka public
-                    skeleton.TakeDamage(attackDamage);
-                    
-                }
+                CombatTarget.TryDamage(enemy, attackDamage + (gameManager.instance?.WeaponBonus(CharacterRole.Warrior) ?? 0), hitTargets);
             }
 
             if (enemy.CompareTag("Villager"))
             {
                 // Player loses health when attacking a Villager
-                TakeDamage(villagerDamageToPlayer);
+                TakeDamage(villagerDamageToPlayer, applyShield: false);
 
                 Debug.Log("Lance attacked a Villager! Player lost health.");
             }
@@ -144,81 +175,43 @@ public class PlayerMovement2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Barrier"))
-        {
-            isDead = true;
-            rb.linearVelocity = Vector2.zero;
-            anim.SetBool("IsDying", true);
-
-
-            gameManager.instance.playSFX(deathSFX, 1, transform);
-            Destroy(gameObject, 2f);
-            gameOverPanel.SetActive(true);
-
-
-
-            if (gameManager.instance != null)
-            {
-                gameManager.instance.ResetGame();
-            }
-
-
-        }
+        if (collision.CompareTag("Barrier"))
+            Die();
     }
 
 
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage) => TakeDamage(damage, applyShield: true);
+
+    private void TakeDamage(float damage, bool applyShield)
     {
         if (isDead) return;
+
+        int defense = gameManager.instance?.ShieldDefense ?? 0;
+        if (applyShield && damage > 0f && defense > 0)
+            damage = Mathf.Max(Mathf.Min(1f, damage), damage - defense);
 
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
 
-        healthBar.value = health;
+        if (healthBar != null)
+            healthBar.value = health;
 
         Debug.Log("Player Health: " + health);
 
-        if (health <= 0)
-        {
-            isDead = true;
-
-            rb.linearVelocity = Vector2.zero;
-
-
-            anim.SetBool("IsDying", true);
-           
-
-
-
-
-            Invoke(nameof(ShowGameOver), gameOverDelay);
-
-            Destroy(gameObject, gameOverDelay);
-            //sound
-            gameManager.instance.playSFX(deathSFX, 1, transform);
-
-            if (gameManager.instance != null)
-            {
-                gameManager.instance.ResetGame();
-            }
-        }
+        if (health <= 0f)
+            Die();
     }
 
-    private void ShowGameOver()
+    private void Die()
     {
-        if (gameOverPanel != null)
-        {
-            gameOverPanel.SetActive(true);
+        if (isDead)
+            return;
 
-        }
-        else
-        {
-            Debug.LogWarning("Game Over Panel is not assigned!");
-        }
+        isDead = true;
+        health = 0;
+        if (healthBar != null)
+            healthBar.value = 0;
+        DeathPresentation.Player(this, rb, anim, "Warrior_die", gameOverPanel, deathSFX);
     }
-
-
-
-
 }

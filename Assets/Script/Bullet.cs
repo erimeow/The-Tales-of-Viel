@@ -41,47 +41,48 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hasHit) return;
+        if (hasHit)
+            return;
+
+        if (other.TryGetComponent<Animal>(out _))
+            HitEnemy(other);
+        else if (other.TryGetComponent<TownPatrol>(out _))
+            HitVillager();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (hasHit)
+            return;
 
         if (collision.gameObject.CompareTag("Enemy"))
-        {
-            hasHit = true;
-
-            Skeleton enemy =
-                collision.gameObject.GetComponent<Skeleton>();
-
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-                Debug.Log("Bullet hit enemy! Damage: " + damage);
-            }
-
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Barrier"))
-        {
-            Destroy(gameObject);
-        }
-
-        // Hit Villager
+            HitEnemy(collision.collider);
         else if (collision.gameObject.CompareTag("Villager"))
+            HitVillager();
+        else if (collision.gameObject.CompareTag("Barrier"))
         {
             hasHit = true;
-
-            PlayerMovementArcher archer =
-                FindFirstObjectByType<PlayerMovementArcher>();
-
-            if (archer != null)
-            {
-                archer.TakeDamage(archer.villagerDamageToPlayer);
-
-                Debug.Log("Archer hit a Villager! Lost health.");
-            }
-
             Destroy(gameObject);
         }
+    }
 
+    private void HitEnemy(Collider2D target)
+    {
+        hasHit = true;
+        if (CombatTarget.TryDamage(target, damage))
+            Debug.Log("Bullet hit enemy! Damage: " + damage);
+        Destroy(gameObject);
+    }
+
+    private void HitVillager()
+    {
+        hasHit = true;
+        var archer = PlayerWeaponLoadout.Active?.GetComponent<PlayerMovementArcher>() ??
+            FindFirstObjectByType<PlayerMovementArcher>();
+        if (archer != null)
+            archer.TakeDamage(archer.villagerDamageToPlayer);
+        Destroy(gameObject);
     }
 }

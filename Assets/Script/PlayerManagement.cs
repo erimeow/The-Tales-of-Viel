@@ -35,6 +35,7 @@ public class PlayerManagement : MonoBehaviour
             transform.position,
             Quaternion.identity
         );
+        PlayerWeaponLoadout.Register(currentPlayer);
     }
 
     private void Start()

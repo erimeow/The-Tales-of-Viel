@@ -14,7 +14,10 @@ public class QtsData : ScriptableObject
         public string[] replies;
 
         public int correctReplyIndex;
+        public string[] followUps;
     }
 
+    public string speakerName;
+    public string completionKey;
     public Question[] questions;
 }

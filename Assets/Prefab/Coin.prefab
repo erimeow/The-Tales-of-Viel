@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d733d0c823a7384b9e77ae8b6916a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  collectedParticles: {fileID: 6861842878431995771, guid: 0ea7a89e72132074e9fb10b2d8b689fa, type: 3}
+  collectSFX: {fileID: 8300000, guid: 46e7fc2590c4ae64fb8c79606698b98d, type: 3}
 --- !u!58 &7794580197640727229
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -8,7 +8,12 @@ public class Item
         HealthPotion,
         ManaPotion,
         Coin,
-        Medkit
+        Medkit,
+        Apple,
+        Bread,
+        CookedMeat,
+        Stew,
+        SpecialMeal
     }
 
     public ItemType itemType;
@@ -16,6 +21,9 @@ public class Item
 
     public Sprite GetSprite()
     {
+        if (FoodCatalog.TryGet(itemType, out var food))
+            return food.Icon;
+
         if (ItemAsset.Instance == null)
         {
             Debug.LogError("ItemAsset.Instance is NULL!");
