@@ -13,33 +13,40 @@ MonoBehaviour:
   m_Name: NPC
   m_EditorClassIdentifier: Assembly-CSharp::QtsData
   speakerName: Alden
-  completionKey: Viel.Npc.AldenTutorialComplete
+  completionKey: Viel.Npc.AldenPracticalTutorialComplete
   questions:
-  - questionText: "Welcome, adventurer! You've awakened in a strange place. This is the beginning of your journey."
+  - questionText: "Welcome, traveler. I'm Alden. Before you cross into the world ahead, let me help you find your footing."
     replies:
     - "Where am I?"
-    - "What should I do here?"
+    - "Can you teach me?"
     followUps:
-    - "You're in a peaceful starting area. This is where your journey begins before you enter the world ahead."
-    - "Take your time to prepare yourself. You'll soon explore new places, gather resources, and face different challenges."
-  - questionText: "Before you leave, let me teach you how to move around."
+    - "This is a safe place to learn. The path ahead is less forgiving, so let's practice before you leave."
+    - "Of course. I'll guide you through each move, and you'll try it yourself before going on."
+  - questionText: "First, let's see you move. Your feet will carry you farther than any sword."
     replies:
-    - "How do I move?"
-    - "I'm ready to learn."
+    - "How do I walk?"
+    - "Can I use the arrow keys?"
     followUps:
-    - "Use the W, A, S, and D keys on your keyboard. W moves you up, A moves you left, S moves you down, and D moves you right."
-    - "Excellent! Remember these keys: W to move up, A to move left, S to move down, and D to move right."
-  - questionText: "Knowing how to move is important, but you'll also need to defend yourself during your journey."
+    - "Use W, A, S, and D to move. Now take a few steps so I can see you've got it."
+    - "Yes, the arrow keys work too. Try moving a short distance now; WASD will also work."
+  - questionText: "Now for your attack. Practice the motion here; no one needs to get hurt."
     replies:
-    - "How do I attack?"
-    - "What button should I use?"
+    - "How do I strike?"
+    - "Do I need a target?"
     followUps:
-    - "Use the RIGHT MOUSE BUTTON to perform an attack. Remember, it's the right-click button, not the left-click button."
-    - "Simply press the RIGHT MOUSE BUTTON to attack. Keep that in mind when facing danger."
-  - questionText: "Now you know the basic controls you'll need for your journey."
+    - "Press the RIGHT MOUSE BUTTON to attack. Give it one try now."
+    - "Not for this lesson. Right-click once to practice your attack safely."
+  - questionText: "Warrior, your shield can save your life. Let me see you raise it."
     replies:
-    - "Thank you for your help!"
-    - "I'm ready to continue."
+    - "How do I guard?"
+    - "When should I use my shield?"
     followUps:
-    - "You're welcome, adventurer! Stay alert and take care of yourself."
-    - "That's the spirit! Prepare yourself and good luck on your journey!"
+    - "Hold SPACE to guard. Keep it raised for a moment so I know you're ready."
+    - "Raise it when a blow is coming. Hold SPACE now and feel the stance."
+  - questionText: "You've walked and practiced your attack. The path ahead is yours to explore."
+    replies:
+    - "Thank you, Alden."
+    - "What comes next?"
+    followUps:
+    - "You're welcome. Follow the checkpoint flag when you're ready to travel onward."
+    - "Explore at your own pace, then find the checkpoint flag to reach the next stage."

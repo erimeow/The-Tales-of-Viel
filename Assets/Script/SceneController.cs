@@ -43,6 +43,9 @@ public class SceneController : MonoBehaviour
 
     private bool StageBlocked()
     {
+        if (gameObject.scene.name == "Scene 1" &&
+            PlayerPrefs.GetInt(QuestionManager.AldenTutorialKey, 0) != 1)
+            return true;
         if (checkpointBossSpawner != null && !checkpointBossSpawner.SpawnedEnemyDefeated)
             return true;
         if (!requireTrivia)

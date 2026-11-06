@@ -10,6 +10,7 @@ internal sealed class NpcDialogueView
     private readonly Canvas canvas;
     private readonly TMP_Text speech;
     private readonly TMP_Text response;
+    private readonly RectTransform choices;
     private readonly UnityEngine.UI.Button[] buttons = new UnityEngine.UI.Button[2];
     private readonly TMP_Text[] labels = new TMP_Text[2];
 
@@ -36,7 +37,7 @@ internal sealed class NpcDialogueView
         speech.fontSizeMin = 18;
         speech.fontSizeMax = 24;
 
-        var choices = Frame(dialogue, "Player choices", new Vector2(1, 1),
+        choices = Frame(dialogue, "Player choices", new Vector2(1, 1),
             new Vector2(-300, 47), new Vector2(600, 88), Moss);
         response = HudArt.Text(choices, "Selected response", "", new Vector2(.5f, 1),
             new Vector2(0, -23), new Vector2(567, 34), 20, HudArt.Gold);
@@ -77,6 +78,7 @@ internal sealed class NpcDialogueView
             eventSystem.SetSelectedGameObject(null);
 
         speech.text = line;
+        choices.gameObject.SetActive(replies.Length > 0 || selection != null);
         response.gameObject.SetActive(selection != null);
         response.text = selection == null ? "" : "You: " + selection;
         for (int i = 0; i < buttons.Length; i++)

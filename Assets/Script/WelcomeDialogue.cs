@@ -42,7 +42,8 @@ public class WelcomeDialogue : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (speaker != null && collision.attachedRigidbody == playerRb &&
-            activeDialogue != this && questionManager != null && questionManager.HasCompleted)
+            activeDialogue != this && questionManager != null && questionManager.HasCompleted &&
+            !questionManager.IsDialogueOpen)
             hasTriggered = false;
     }
 
@@ -57,7 +58,6 @@ public class WelcomeDialogue : MonoBehaviour
             return;
 
         hasTriggered = true;
-        activeDialogue = this;
 
         if (playerManager != null)
         {
@@ -68,13 +68,7 @@ public class WelcomeDialogue : MonoBehaviour
         if (speaker != null || journalPage > 0)
             playerRb = collision.attachedRigidbody;
 
-        if (playerRb != null)
-        {
-            originalConstraints = playerRb.constraints;
-            playerRb.linearVelocity = Vector2.zero;
-            playerRb.angularVelocity = 0f;
-            playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
-        }
+        PausePlayer();
 
         if (journalPage > 0)
         {
@@ -133,7 +127,24 @@ public class WelcomeDialogue : MonoBehaviour
         if (welcomePanel != null)
             welcomePanel.SetActive(false);
 
+        if (speaker != null && questionManager != null && questionManager.HasCompleted &&
+            !questionManager.IsDialogueOpen)
+            hasTriggered = false;
+
         Debug.Log("Player movement resumed!");
+    }
+
+    internal void PausePlayer()
+    {
+        if (playerRb == null)
+            return;
+
+        if (activeDialogue != this)
+            originalConstraints = playerRb.constraints;
+        activeDialogue = this;
+        playerRb.linearVelocity = Vector2.zero;
+        playerRb.angularVelocity = 0f;
+        playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     private void OnDisable()

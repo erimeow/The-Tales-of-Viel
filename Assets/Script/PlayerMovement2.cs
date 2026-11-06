@@ -49,6 +49,7 @@ public class PlayerMovement2 : MonoBehaviour
     }
 
     public bool IsDead => isDead;
+    internal bool IsGuarding => isGuarding && anim != null && anim.GetBool("IsGuarding");
 
     internal bool TryHeal(float amount)
     {
