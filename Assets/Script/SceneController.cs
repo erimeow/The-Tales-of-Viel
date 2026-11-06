@@ -9,7 +9,18 @@ public class SceneController : MonoBehaviour
     [SerializeField] private EnemySpawner checkpointBossSpawner;
     private bool loading;
 
-    private void Start() => RefreshCheckpoint();
+    private void Start()
+    {
+        RefreshCheckpoint();
+        if (gameObject.scene.name == "Scene 3")
+            StartCoroutine(PreloadBossArt());
+    }
+
+    private System.Collections.IEnumerator PreloadBossArt()
+    {
+        yield return DragonAppearance.Preload("Emberwing", 6, 8, 10, 8);
+        yield return DragonAppearance.Preload("DreamMutant", 2, 3, 4, 3);
+    }
 
     internal void RefreshCheckpoint()
     {
@@ -64,12 +75,6 @@ public class SceneController : MonoBehaviour
         }
 
         loading = true;
-        if (checkpointFlag == null)
-        {
-            SceneManager.LoadSceneAsync(nextIndex);
-            return;
-        }
-
         if (body != null)
         {
             body.linearVelocity = Vector2.zero;

@@ -2816,7 +2816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skeleton
   moveSpeed: 1.5
-  health: 1250
+  health: 2000
   bossName: Gravebound Tyrant
   damage: 10
   obstacleLayer:

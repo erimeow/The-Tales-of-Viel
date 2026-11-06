@@ -64,7 +64,11 @@ public class Skeleton : MonoBehaviour
         skeletonCollider = GetComponent<Collider2D>();
         bool boss = !string.IsNullOrEmpty(bossName);
         string sceneName = gameObject.scene.name;
-        bool themedScene = sceneName == "SampleScene" || sceneName == "Scene 2";
+        bool themedScene = sceneName == "Scene 2" || sceneName == "Scene 3";
+        if (boss && sceneName == "Scene 2")
+            health = 2000f;
+        else if (boss && sceneName == "Scene 3")
+            health = 5000f;
         bool armored = health >= 135 || (health >= 100 && Mathf.FloorToInt(transform.position.x / 8f) % 2 != 0);
         if (maxHealth <= 0f)
         {
@@ -77,12 +81,12 @@ public class Skeleton : MonoBehaviour
         if (existingBar != null)
             existingBar.SetHealth(health, maxHealth);
 
-        if (boss && sceneName == "Scene 2")
+        if (boss && sceneName == "Scene 3")
         {
             bossName = "Emberwing";
             dragon = new DragonAppearance(transform);
         }
-        else if (boss && sceneName == "SampleScene")
+        else if (boss && sceneName == "Scene 2")
         {
             bossName = "The Hollow Widow";
             dragon = new DragonAppearance(transform, "HollowWidow", "Hollow Widow art", .12f);
@@ -91,7 +95,7 @@ public class Skeleton : MonoBehaviour
         {
             dragon = new DragonAppearance(transform, "DreamMutant", "Dream Mutant art", .08f);
         }
-        else if (!boss && sceneName == "Scene 2" && sceneTwoVisual != null)
+        else if (!boss && sceneName == "Scene 3" && sceneTwoVisual != null)
             appearance = new EnemyAppearance(transform, sceneTwoVisual, armored);
 
         //Hitpoints = MaxHitpoints;
@@ -401,6 +405,7 @@ public class Skeleton : MonoBehaviour
         isDead = true;
         isAttacking = false;
         health = 0;
+        gameManager.instance?.RegisterEnemyDefeat();
         Defeated?.Invoke();
         if (existingBar != null)
             existingBar.SetHealth(health, maxHealth);

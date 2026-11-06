@@ -85,7 +85,12 @@ public class Animal : MonoBehaviour
 
         dead = true;
         if (meatDrop != null)
-            Instantiate(meatDrop, transform.position, Quaternion.identity).SetDropAmount(meatAmount);
+        {
+            var drop = Instantiate(meatDrop, transform.position, Quaternion.identity);
+            drop.SetDropAmount(meatAmount);
+            if (gameObject.scene.name == "Scene 3" && drop.TryGetComponent<SpriteRenderer>(out var renderer))
+                renderer.sortingOrder = 10;
+        }
         Destroy(gameObject);
     }
 }

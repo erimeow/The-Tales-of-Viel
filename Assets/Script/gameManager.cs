@@ -14,6 +14,12 @@ public class gameManager : MonoBehaviour
     public int coinCollected = 0;
     public int attkCollected = 0;
 
+    public void RegisterEnemyDefeat()
+    {
+        attkCollected++;
+        UpdateUI();
+    }
+
     private int pendingHealthScene = -1;
     private float pendingHealth;
 

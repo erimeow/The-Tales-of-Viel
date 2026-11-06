@@ -1,20 +1,47 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 internal sealed class DragonAppearance
 {
+    private static readonly Dictionary<string, Sprite[][]> CachedPoses = new();
+    private static readonly string[] PoseNames = { "Idle", "Fly", "Attack", "Die" };
     private readonly SpriteRenderer renderer;
     private readonly Sprite[][] poses;
     private int previousPose = -1;
     private float poseStart;
 
+    internal static IEnumerator Preload(string folder, int idle, int fly, int attack, int die)
+    {
+        if (CachedPoses.ContainsKey(folder))
+            yield break;
+        int[] counts = { idle, fly, attack, die };
+        var loaded = new Sprite[4][];
+        for (int pose = 0; pose < loaded.Length; pose++)
+        {
+            loaded[pose] = new Sprite[counts[pose]];
+            for (int frame = 0; frame < loaded[pose].Length; frame++)
+            {
+                var request = Resources.LoadAsync<Sprite>($"{folder}/{PoseNames[pose]}{frame}");
+                yield return request;
+                loaded[pose][frame] = request.asset as Sprite;
+                if (loaded[pose][frame] == null)
+                    yield break;
+            }
+        }
+        CachedPoses[folder] = loaded;
+    }
     public DragonAppearance(Transform actor, string folder = "Emberwing", string visualName = "Emberwing art", float height = .35f)
     {
-        string[] names = { "Idle", "Fly", "Attack", "Die" };
-        var sprites = Resources.LoadAll<Sprite>(folder);
-        poses = names.Select(name => sprites.Where(sprite => sprite.name.StartsWith(name, StringComparison.Ordinal))
-            .OrderBy(sprite => sprite.name).ToArray()).ToArray();
+        if (!CachedPoses.TryGetValue(folder, out poses))
+        {
+            var sprites = Resources.LoadAll<Sprite>(folder);
+            poses = PoseNames.Select(name => sprites.Where(sprite => sprite.name.StartsWith(name, StringComparison.Ordinal))
+                .OrderBy(sprite => sprite.name).ToArray()).ToArray();
+            CachedPoses[folder] = poses;
+        }
         if (poses.Any(pose => pose.Length == 0))
             return;
 

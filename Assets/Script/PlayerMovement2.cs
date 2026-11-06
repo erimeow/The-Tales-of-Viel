@@ -20,6 +20,7 @@ public class PlayerMovement2 : MonoBehaviour
     private readonly System.Collections.Generic.HashSet<Component> hitTargets = new();
 
     bool isDead = false;
+    bool isGuarding;
 
     public GameObject gameOverPanel;
 
@@ -69,6 +70,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             horizontal = vertical = 0;
             anim?.SetBool("IsRunning", false);
+            isGuarding = false;
             anim?.SetBool("IsGuarding", false);
             return;
         }
@@ -96,7 +98,8 @@ public class PlayerMovement2 : MonoBehaviour
             Attack1();
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        isGuarding = Input.GetKey(KeyCode.Space);
+        if (isGuarding)
         {
             anim.SetBool("IsGuarding", true);
         }
@@ -187,6 +190,8 @@ public class PlayerMovement2 : MonoBehaviour
     {
         if (isDead) return;
 
+        if (applyShield && isGuarding && damage > 0f)
+            return;
         int defense = gameManager.instance?.ShieldDefense ?? 0;
         if (applyShield && damage > 0f && defense > 0)
             damage = Mathf.Max(Mathf.Min(1f, damage), damage - defense);

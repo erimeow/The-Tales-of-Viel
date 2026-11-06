@@ -113,6 +113,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             isDead = true;
+            gameManager.instance?.RegisterEnemyDefeat();
             if (coinDrop != null)
                 Instantiate(coinDrop, transform.position, Quaternion.identity).PlayDropEffect();
 
