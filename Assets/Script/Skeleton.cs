@@ -70,6 +70,8 @@ public class Skeleton : MonoBehaviour
         else if (boss && sceneName == "Scene 3")
             health = 5000f;
         bool armored = health >= 135 || (health >= 100 && Mathf.FloorToInt(transform.position.x / 8f) % 2 != 0);
+        if (!boss && sceneName == "Scene 3" && sceneTwoVisual != null)
+            health = Mathf.Round(health * 1.25f);
         if (maxHealth <= 0f)
         {
             if (themedScene && !boss && armored && health < 135)

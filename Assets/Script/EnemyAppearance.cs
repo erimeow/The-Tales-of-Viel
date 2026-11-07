@@ -11,7 +11,7 @@ internal sealed class EnemyAppearance
 
         SpriteRenderer[] originals = actor.GetComponentsInChildren<SpriteRenderer>(true);
         var visual = Object.Instantiate(prefab, actor, false);
-        visual.name = "Goblin art";
+        visual.name = "Skeleton art";
         visual.transform.localPosition = new Vector3(0f, .05f, 0f);
         visualAnimator = visual.GetComponentInChildren<Animator>();
         if (visualAnimator == null)
@@ -36,7 +36,7 @@ internal sealed class EnemyAppearance
 
         visualAnimator.SetBool("IsAttacking", false);
         visualAnimator.SetBool("IsRunning", false);
-        DeathPresentation.Play(visualAnimator, "Goblin_Dying");
+        DeathPresentation.Play(visualAnimator, "Skeleton_Dying");
     }
 
     public void Show(bool running, bool attacking, bool dead)

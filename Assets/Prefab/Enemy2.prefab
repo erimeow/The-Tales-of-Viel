@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd418f2b4b0c7e24aa90ead971613840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skeleton
-  sceneTwoVisual: {fileID: 1505905564021469714, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+  sceneTwoVisual: {fileID: 8213974656607846790, guid: ac4318888d7476843887c9546b0855be, type: 3}
   moveSpeed: 2
   health: 125
   damage: 10

@@ -1,0 +1,1495 @@
+fileFormatVersion: 2
+guid: 2dac3622764caef4eb5a79ed7a1cb2db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 422145074555007383
+    second: VielsEye_0
+  - first:
+      213: -5452779373100924165
+    second: VielsEye_1
+  - first:
+      213: 3823564249182686401
+    second: VielsEye_2
+  - first:
+      213: 4152447683344783147
+    second: VielsEye_3
+  - first:
+      213: 2979465379102161973
+    second: VielsEye_4
+  - first:
+      213: 6660065686169925869
+    second: VielsEye_5
+  - first:
+      213: -4287530421128666897
+    second: VielsEye_6
+  - first:
+      213: 4247839272279583826
+    second: VielsEye_7
+  - first:
+      213: -7941374495224798367
+    second: VielsEye_8
+  - first:
+      213: 868743600178473681
+    second: VielsEye_9
+  - first:
+      213: -1624203384366541525
+    second: VielsEye_10
+  - first:
+      213: -4057291726804784268
+    second: VielsEye_11
+  - first:
+      213: -10036469501651524
+    second: VielsEye_12
+  - first:
+      213: -4949757559907279386
+    second: VielsEye_13
+  - first:
+      213: -8941051300431207788
+    second: VielsEye_14
+  - first:
+      213: -5620371181208504391
+    second: VielsEye_15
+  - first:
+      213: -8787961413804206858
+    second: VielsEye_16
+  - first:
+      213: 7357005385587647545
+    second: VielsEye_17
+  - first:
+      213: -8852295495931105233
+    second: VielsEye_18
+  - first:
+      213: 3811981970313552038
+    second: VielsEye_19
+  - first:
+      213: -3719794452466128139
+    second: VielsEye_20
+  - first:
+      213: -8899623728307476594
+    second: VielsEye_21
+  - first:
+      213: -778575401517308413
+    second: VielsEye_22
+  - first:
+      213: -4708325831685994117
+    second: VielsEye_23
+  - first:
+      213: -8432675608478489241
+    second: VielsEye_24
+  - first:
+      213: -5193151074656676
+    second: VielsEye_25
+  - first:
+      213: 4709463814071386793
+    second: VielsEye_26
+  - first:
+      213: 3639184139785896975
+    second: VielsEye_27
+  - first:
+      213: 8996968302774311318
+    second: VielsEye_28
+  - first:
+      213: 4954319220669526011
+    second: VielsEye_29
+  - first:
+      213: 3631742931722939874
+    second: VielsEye_30
+  - first:
+      213: 3857628253145766177
+    second: VielsEye_31
+  - first:
+      213: -7273916942858431326
+    second: VielsEye_32
+  - first:
+      213: -6843470103294989972
+    second: VielsEye_33
+  - first:
+      213: -6913112320012335666
+    second: VielsEye_34
+  - first:
+      213: -5128102822472613930
+    second: VielsEye_35
+  - first:
+      213: 1493066892159013610
+    second: VielsEye_36
+  - first:
+      213: 2352582769191464309
+    second: VielsEye_37
+  - first:
+      213: -6500967071757752334
+    second: VielsEye_38
+  - first:
+      213: 4656828234391764373
+    second: VielsEye_39
+  - first:
+      213: 4785195272829056812
+    second: VielsEye_40
+  - first:
+      213: -7233023194560055840
+    second: VielsEye_41
+  - first:
+      213: -6831609552662535141
+    second: VielsEye_42
+  - first:
+      213: 6625736337716439319
+    second: VielsEye_43
+  - first:
+      213: 4058794646989214614
+    second: VielsEye_44
+  - first:
+      213: 961155620557191547
+    second: VielsEye_45
+  - first:
+      213: 6165472843698290694
+    second: VielsEye_46
+  - first:
+      213: 2158453399509467183
+    second: VielsEye_47
+  - first:
+      213: -1648182608709299430
+    second: VielsEye_48
+  - first:
+      213: -8805549031376741581
+    second: VielsEye_49
+  - first:
+      213: 1349756084895548757
+    second: VielsEye_50
+  - first:
+      213: -3930643872055785011
+    second: VielsEye_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 320
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VielsEye_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1241
+        height: 1232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791388c65b2cbd500800000000000000
+      internalID: 422145074555007383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_1
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1184
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf20ebbdc06d354b0800000000000000
+      internalID: -5452779373100924165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_2
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ccca603d67001530800000000000000
+      internalID: 3823564249182686401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 968
+        width: 63
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27d82ada2570a930800000000000000
+      internalID: 4152447683344783147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 988
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c75f5f9ff295920800000000000000
+      internalID: 2979465379102161973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 751
+        width: 33
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de83dec747e4d6c50800000000000000
+      internalID: 6660065686169925869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 745
+        width: 5
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0e1fc5cc1af74c0800000000000000
+      internalID: -4287530421128666897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 431
+        width: 27
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cad27ef4b53fa30800000000000000
+      internalID: 4247839272279583826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_8
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 416
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16367c7c8f19ac190800000000000000
+      internalID: -7941374495224798367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_9
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 431
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da288993b56e0c00800000000000000
+      internalID: 868743600178473681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_10
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 371
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2558d790aba579e0800000000000000
+      internalID: -1624203384366541525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_11
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 371
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b6ba1cbaa91b7c0800000000000000
+      internalID: -4057291726804784268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_12
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 365
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb51e8852e75cdff0800000000000000
+      internalID: -10036469501651524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_13
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 357
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed1c6569bdee4bb0800000000000000
+      internalID: -4949757559907279386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_14
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 347
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492e047c6310be380800000000000000
+      internalID: -8941051300431207788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 308
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7793e403e6002b0800000000000000
+      internalID: -5620371181208504391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 5
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f45c5e97a3ea0680800000000000000
+      internalID: -8787961413804206858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_17
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 258
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934669a4b65591660800000000000000
+      internalID: 7357005385587647545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 272
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f207c3ed524562580800000000000000
+      internalID: -8852295495931105233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 224
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0abbeb761e6e430800000000000000
+      internalID: 3811981970313552038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 5
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5faa94f57a2a06cc0800000000000000
+      internalID: -3719794452466128139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_21
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 184
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87689f0f5f2e7480800000000000000
+      internalID: -8899623728307476594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30624b12cc1f135f0800000000000000
+      internalID: -778575401517308413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_23
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 164
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b798f831a9aa8aeb0800000000000000
+      internalID: -4708325831685994117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 162
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765e98a563e19fa80800000000000000
+      internalID: -8432675608478489241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_25
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 151
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e1eea4bdc8deff0800000000000000
+      internalID: -5193151074656676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_26
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 128
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2084813606b5140800000000000000
+      internalID: 4709463814071386793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_27
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 67
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f048c24a1baf08230800000000000000
+      internalID: 3639184139785896975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_28
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 75
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699df4ed007abdc70800000000000000
+      internalID: 8996968302774311318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_29
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 91
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffa5e3051741c440800000000000000
+      internalID: 4954319220669526011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_30
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 77
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eda1e064fa866230800000000000000
+      internalID: 3631742931722939874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_31
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 83
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1299348257c098530800000000000000
+      internalID: 3857628253145766177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_32
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 37
+        width: 26
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a45a3f441bdd0b90800000000000000
+      internalID: -7273916942858431326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_33
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 91
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69a816033c1701a0800000000000000
+      internalID: -6843470103294989972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_34
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 83
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5c941e8f0bf00a0800000000000000
+      internalID: -6913112320012335666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_35
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 66
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df77de17a155d8b0800000000000000
+      internalID: -5128102822472613930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_36
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 77
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2d8058d6078b410800000000000000
+      internalID: 1493066892159013610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_37
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 55
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dac56609d06a020800000000000000
+      internalID: 2352582769191464309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_38
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 45
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f72e5f44ece7c5a0800000000000000
+      internalID: -6500967071757752334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_39
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 21
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d3ee23b9060a040800000000000000
+      internalID: 4656828234391764373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_40
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 49
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27bad16fbd686240800000000000000
+      internalID: 4785195272829056812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_41
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 34
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5361c0ab32f9b90800000000000000
+      internalID: -7233023194560055840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_42
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 47
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b146269ae4f3131a0800000000000000
+      internalID: -6831609552662535141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_43
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 20
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7196cf0381853fb50800000000000000
+      internalID: 6625736337716439319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_44
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 55
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6939c0e1a3cb35830800000000000000
+      internalID: 4058794646989214614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_45
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 50
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b797e29c1f5b65d00800000000000000
+      internalID: 961155620557191547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_46
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 33
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60044f0a2e8209550800000000000000
+      internalID: 6165472843698290694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_47
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 37
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f200ffd4eed54fd10800000000000000
+      internalID: 2158453399509467183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_48
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 17
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13d7ea56aa7029e0800000000000000
+      internalID: -1648182608709299430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_49
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 16
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b118c4fc76cc580800000000000000
+      internalID: -8805549031376741581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_50
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 19
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5550f95020c4bb210800000000000000
+      internalID: 1349756084895548757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VielsEye_51
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 13
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc98c8b493c8379c0800000000000000
+      internalID: -3930643872055785011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      VielsEye_0: 422145074555007383
+      VielsEye_1: -5452779373100924165
+      VielsEye_10: -1624203384366541525
+      VielsEye_11: -4057291726804784268
+      VielsEye_12: -10036469501651524
+      VielsEye_13: -4949757559907279386
+      VielsEye_14: -8941051300431207788
+      VielsEye_15: -5620371181208504391
+      VielsEye_16: -8787961413804206858
+      VielsEye_17: 7357005385587647545
+      VielsEye_18: -8852295495931105233
+      VielsEye_19: 3811981970313552038
+      VielsEye_2: 3823564249182686401
+      VielsEye_20: -3719794452466128139
+      VielsEye_21: -8899623728307476594
+      VielsEye_22: -778575401517308413
+      VielsEye_23: -4708325831685994117
+      VielsEye_24: -8432675608478489241
+      VielsEye_25: -5193151074656676
+      VielsEye_26: 4709463814071386793
+      VielsEye_27: 3639184139785896975
+      VielsEye_28: 8996968302774311318
+      VielsEye_29: 4954319220669526011
+      VielsEye_3: 4152447683344783147
+      VielsEye_30: 3631742931722939874
+      VielsEye_31: 3857628253145766177
+      VielsEye_32: -7273916942858431326
+      VielsEye_33: -6843470103294989972
+      VielsEye_34: -6913112320012335666
+      VielsEye_35: -5128102822472613930
+      VielsEye_36: 1493066892159013610
+      VielsEye_37: 2352582769191464309
+      VielsEye_38: -6500967071757752334
+      VielsEye_39: 4656828234391764373
+      VielsEye_4: 2979465379102161973
+      VielsEye_40: 4785195272829056812
+      VielsEye_41: -7233023194560055840
+      VielsEye_42: -6831609552662535141
+      VielsEye_43: 6625736337716439319
+      VielsEye_44: 4058794646989214614
+      VielsEye_45: 961155620557191547
+      VielsEye_46: 6165472843698290694
+      VielsEye_47: 2158453399509467183
+      VielsEye_48: -1648182608709299430
+      VielsEye_49: -8805549031376741581
+      VielsEye_5: 6660065686169925869
+      VielsEye_50: 1349756084895548757
+      VielsEye_51: -3930643872055785011
+      VielsEye_6: -4287530421128666897
+      VielsEye_7: 4247839272279583826
+      VielsEye_8: -7941374495224798367
+      VielsEye_9: 868743600178473681
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
