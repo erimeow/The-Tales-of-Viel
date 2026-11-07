@@ -395,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndingBedroom
   roomArt: {fileID: 1830014993}
   wakeUpDialogue: {fileID: 11400000, guid: be4a305898bcb0d4bb8376bc3239f97d, type: 2}
+  endingFont: {fileID: 12800000, guid: 770cb8d892def5444b99a31ac82d8e3e, type: 3}
 --- !u!212 &1830014993
 SpriteRenderer:
   serializedVersion: 2

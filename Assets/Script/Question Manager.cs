@@ -40,7 +40,8 @@ public class QuestionManager : MonoBehaviour
     private Practice practice;
     private bool awaitingPracticeReply;
     private Vector2 lastPracticePosition;
-    private float walkedDistance;
+    private readonly float[] walkedDirections = new float[4];
+    private readonly float[] walkKeyUntil = new float[4];
     private int walkedKeys;
     private bool attackRequested;
     private float attackObservedAt;
@@ -139,7 +140,7 @@ public class QuestionManager : MonoBehaviour
                 AdvanceAldenTopic();
             }
             else if (currentQuestion == 1)
-                StartPractice(Practice.Walk, "Your turn: walk using W, A, S, and D. Try every key.");
+                StartPractice(Practice.Walk, "Your turn: walk a short distance with each of W, A, S, and D.");
             else if (currentQuestion == 2)
                 StartPractice(Practice.Attack, "Your turn: right-click and watch your attack.");
             else if (currentQuestion == 3)
@@ -167,7 +168,8 @@ public class QuestionManager : MonoBehaviour
     private void StartPractice(Practice step, string instruction)
     {
         practice = step;
-        walkedDistance = 0f;
+        System.Array.Clear(walkedDirections, 0, walkedDirections.Length);
+        System.Array.Clear(walkKeyUntil, 0, walkKeyUntil.Length);
         walkedKeys = 0;
         attackRequested = false;
         attackObservedAt = -1f;
@@ -194,19 +196,19 @@ public class QuestionManager : MonoBehaviour
         if (practice == Practice.Walk)
         {
             Vector2 position = player.Body.position;
-            walkedDistance += Vector2.Distance(position, lastPracticePosition);
+            Vector2 movement = position - lastPracticePosition;
             lastPracticePosition = position;
             int previousKeys = walkedKeys;
-            if (Input.GetKey(KeyCode.W)) walkedKeys |= 1;
-            if (Input.GetKey(KeyCode.A)) walkedKeys |= 2;
-            if (Input.GetKey(KeyCode.S)) walkedKeys |= 4;
-            if (Input.GetKey(KeyCode.D)) walkedKeys |= 8;
+            TrackWalk(KeyCode.W, 0, movement.y);
+            TrackWalk(KeyCode.A, 1, -movement.x);
+            TrackWalk(KeyCode.S, 2, -movement.y);
+            TrackWalk(KeyCode.D, 3, movement.x);
             if (walkedKeys != previousKeys)
-                conversation.Show("Try every movement key: W " + KeyProgress(1) +
+                conversation.Show("Walk each direction: W " + KeyProgress(1) +
                     "  A " + KeyProgress(2) + "  S " + KeyProgress(4) +
                     "  D " + KeyProgress(8), System.Array.Empty<string>());
-            if (walkedKeys == 15 && walkedDistance >= 0.25f)
-                FinishPractice("Good work. You tried every movement key.");
+            if (walkedKeys == 15)
+                FinishPractice("Good work. You walked in every direction.");
         }
         else if (practice == Practice.Attack)
         {
@@ -227,6 +229,22 @@ public class QuestionManager : MonoBehaviour
     }
 
     private string KeyProgress(int key) => (walkedKeys & key) != 0 ? "OK" : "...";
+
+    private void TrackWalk(KeyCode key, int direction, float distance)
+    {
+        int mask = 1 << direction;
+        if ((walkedKeys & mask) != 0)
+            return;
+
+        if (Input.GetKey(key))
+            walkKeyUntil[direction] = Time.time + 0.2f;
+        if (Time.time > walkKeyUntil[direction])
+            return;
+
+        walkedDirections[direction] += Mathf.Max(0f, distance);
+        if (walkedDirections[direction] >= 0.4f)
+            walkedKeys |= mask;
+    }
 
     private static bool IsPlayingAttack(PlayerWeaponLoadout player)
     {

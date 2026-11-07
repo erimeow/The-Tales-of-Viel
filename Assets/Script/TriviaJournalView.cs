@@ -27,10 +27,11 @@ internal sealed class TriviaJournalView
         grain.sprite = texture;
 
         Label(paper, "Field notes", $"ADVENTURER'S JOURNAL  /  FIELD NOTE {page:00}", 82, 442, 22, 14, font);
-        Label(paper, "Title", "DID YOU KNOW?", 52, 442, 32, 26, font);
-        HudArt.Image(HudArt.Rect(paper, "Divider", Center, new Vector2(0, 32), new Vector2(424, 2)), Bronze);
+        HudArt.Image(HudArt.Rect(paper, "Divider", Center, new Vector2(0, 52), new Vector2(424, 2)), Bronze);
 
-        var body = Label(paper, "Trivia text", trivia, -9, 424, 76, 21, font);
+        if (trivia.StartsWith("Did you know?", StringComparison.OrdinalIgnoreCase))
+            trivia = trivia.Substring("Did you know?".Length).TrimStart();
+        var body = Label(paper, "Trivia text", trivia, 2, 424, 88, 21, font);
         body.resizeTextForBestFit = true;
         body.resizeTextMinSize = 16;
         body.resizeTextMaxSize = 21;

@@ -8,10 +8,12 @@ public sealed class EndingBedroom : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer roomArt;
     [SerializeField] private QtsData wakeUpDialogue;
+    [SerializeField] private Font endingFont;
     private static readonly Vector2 Middle = new(.5f, .5f);
     private static readonly Vector2 Pillow = new(.874f, .37f);
     private static readonly Vector2 BesideBed = new(.716f, .34f);
     private static readonly Rect Floor = new(.072f, .115f, .852f, .571f);
+    private static readonly Rect Doorway = new(.445f, .67f, .11f, .075f);
     private static readonly Rect[] Furniture =
     {
         new(.075f, .445f, .178f, .23f),
@@ -27,8 +29,14 @@ public sealed class EndingBedroom : MonoBehaviour
     private Canvas canvas;
     private QuestionManager dialogue;
     private GameObject endingPanel;
+    private GameObject finalePanel;
+    private Text finaleHeading;
+    private Text finaleBody;
+    private Text finalePage;
+    private Text finaleButtonLabel;
     private Image fade;
     private bool canWalk;
+    private int finalePageIndex;
 
     private void Start()
     {
@@ -106,11 +114,104 @@ public sealed class EndingBedroom : MonoBehaviour
         endingPanel = summary.gameObject;
         endingPanel.SetActive(false);
 
+        BuildFinale();
+
         var cover = HudArt.Rect(canvas.transform, "Wake-up fade", Middle, Vector2.zero, Vector2.zero);
         cover.anchorMin = Vector2.zero;
         cover.anchorMax = Vector2.one;
         cover.offsetMin = cover.offsetMax = Vector2.zero;
         fade = HudArt.Image(cover, Color.black);
+    }
+
+    private void BuildFinale()
+    {
+        var frame = HudArt.Rect(canvas.transform, "Door ending", Middle, Vector2.zero, new Vector2(744, 510));
+        HudArt.Image(frame, new Color32(54, 32, 27, 255)).raycastTarget = true;
+        var trim = HudArt.Rect(frame, "Bronze edge", Middle, Vector2.zero, new Vector2(736, 502));
+        HudArt.Image(trim, new Color32(157, 111, 61, 255));
+        var page = HudArt.Rect(trim, "Paper", Middle, Vector2.zero, new Vector2(728, 494));
+        HudArt.Image(page, new Color32(237, 216, 177, 255));
+        finaleHeading = FinaleText(page, "Heading", new Vector2(0, 187), new Vector2(665, 62), 32,
+            new Color32(66, 42, 32, 255), TextAnchor.MiddleCenter);
+        var rule = HudArt.Rect(page, "Rule", Middle, new Vector2(0, 146), new Vector2(620, 2));
+        HudArt.Image(rule, new Color32(157, 111, 61, 255));
+        finaleBody = FinaleText(page, "Story and credits", new Vector2(0, 10), new Vector2(640, 252), 21,
+            new Color32(62, 44, 35, 255), TextAnchor.MiddleCenter);
+        finaleBody.resizeTextForBestFit = true;
+        finaleBody.resizeTextMinSize = 16;
+        finaleBody.resizeTextMaxSize = 21;
+        finalePage = FinaleText(page, "Page number", new Vector2(-270, -202), new Vector2(125, 30), 15,
+            new Color32(114, 76, 49, 255), TextAnchor.MiddleLeft);
+        var next = AddButton(page, "Next page", Middle, new Vector2(252, -202), new Vector2(175, 42));
+        finaleButtonLabel = FinaleText(next.transform, "Button label", Vector2.zero, new Vector2(165, 36), 19,
+            HudArt.Cream, TextAnchor.MiddleCenter);
+        next.GetComponent<Image>().color = new Color32(101, 62, 43, 255);
+        next.onClick.AddListener(AdvanceFinale);
+        finalePanel = frame.gameObject;
+        finalePanel.SetActive(false);
+    }
+
+    private Text FinaleText(Transform parent, string name, Vector2 at, Vector2 size, int sizeInPoints,
+        Color color, TextAnchor alignment)
+    {
+        var label = HudArt.Rect(parent, name, Middle, at, size).gameObject.AddComponent<Text>();
+        label.font = endingFont != null ? endingFont : Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        label.fontSize = sizeInPoints;
+        label.color = color;
+        label.alignment = alignment;
+        label.raycastTarget = false;
+        label.horizontalOverflow = HorizontalWrapMode.Wrap;
+        return label;
+    }
+
+    private void OpenFinale()
+    {
+        canWalk = false;
+        endingPanel.SetActive(false);
+        finalePageIndex = 0;
+        ShowFinalePage();
+        finalePanel.SetActive(true);
+    }
+
+    private void AdvanceFinale()
+    {
+        if (finalePageIndex == 3)
+        {
+            ReturnToTitle();
+            return;
+        }
+        finalePageIndex++;
+        ShowFinalePage();
+    }
+
+    private void ShowFinalePage()
+    {
+        switch (finalePageIndex)
+        {
+            case 0:
+                finaleHeading.text = "THE TALES OF VIEL";
+                finaleBody.text = "Back in the bedroom, the journey through Viel feels like a dream.\n\nAlden's lessons, the villages, the battles, and the final dragon all led home.";
+                break;
+            case 1:
+                finaleHeading.text = "FIELD NOTES";
+                finaleBody.text = "Movement and timing kept the traveler alive. Enemies dropped coins; animals provided meat. Both could be saved for equipment and food at the shops.\n\nEach flag marked the way forward. Preparation mattered as much as winning a fight.";
+                break;
+            case 2:
+                finaleHeading.text = "GROUP 1  /  DEVELOPMENT CREDITS";
+                finaleBody.text = "RENIER C. LABONITE  -  Project Leader / Documentation / Developer\n" +
+                    "NORLITO D. DELA CRUZ  -  UI / Design\n" +
+                    "NIEL KRISTIAN I. MAGTOTO  -  Programmer\n" +
+                    "JOHN PAUL A. MOSCOSA  -  Audio\n" +
+                    "JOHN JOVIT JAMES Q. NARES  -  Game Level Design / Documentation\n" +
+                    "MARVIN G. TRAQUIÑA  -  Quality Assurance / Documentation";
+                break;
+            default:
+                finaleHeading.text = "THE END";
+                finaleBody.text = "Thank you for playing.";
+                break;
+        }
+        finalePage.text = $"{finalePageIndex + 1:00} / 04";
+        finaleButtonLabel.text = finalePageIndex == 3 ? "MAIN MENU" : "CONTINUE";
     }
 
     private static Button AddButton(Transform parent, string name, Vector2 anchor, Vector2 at, Vector2 size)
@@ -158,6 +259,11 @@ public sealed class EndingBedroom : MonoBehaviour
         if (CanWalkTo(new Vector2(current.x, proposed.y)))
             current.y = proposed.y;
         SetPosition(current);
+        if (Doorway.Contains(current) && current.y >= .705f)
+        {
+            OpenFinale();
+            return;
+        }
         if (direction.x != 0)
             avatar.flipX = direction.x < 0;
         avatar.sprite = direction == Vector2.zero ? pajamas[0] : pajamas[1 + Mathf.FloorToInt(Time.unscaledTime * 8f) % 2];
@@ -165,7 +271,7 @@ public sealed class EndingBedroom : MonoBehaviour
 
     private static bool CanWalkTo(Vector2 position)
     {
-        if (!Floor.Contains(position))
+        if (!Floor.Contains(position) && !Doorway.Contains(position))
             return false;
         foreach (Rect furniture in Furniture)
             if (furniture.Contains(position))

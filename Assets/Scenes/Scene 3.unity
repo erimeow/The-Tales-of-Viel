@@ -4090,6 +4090,10 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 6303155238228185574, guid: f2aaa5748a3ed5a4a95cfa0d33d4cff8, type: 3}
+    - target: {fileID: 4103942131012229134, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
+      propertyPath: trackDefeat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5930792904163954532, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.73
@@ -4130,10 +4134,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4103942131012229134, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
-      propertyPath: trackDefeat
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4142,17 +4142,6 @@ PrefabInstance:
       addedObject: {fileID: 568333836}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
---- !u!114 &864200000000000001 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4103942131012229134, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
-  m_PrefabInstance: {fileID: 344708339}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 229dc9d5098ad6043a72badf5b266937, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!4 &344708340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5930792904163954532, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
@@ -101689,16 +101678,16 @@ PrefabInstance:
       value: Scene Controller
       objectReference: {fileID: 0}
     - target: {fileID: 4500272035318632187, guid: fdc7fb9734a7c1b44b257f0888c76f9c, type: 3}
+      propertyPath: requireTrivia
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500272035318632187, guid: fdc7fb9734a7c1b44b257f0888c76f9c, type: 3}
       propertyPath: checkpointFlag
       value: 
       objectReference: {fileID: 7091446138406137402}
     - target: {fileID: 4500272035318632187, guid: fdc7fb9734a7c1b44b257f0888c76f9c, type: 3}
       propertyPath: showLockedFlag
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500272035318632187, guid: fdc7fb9734a7c1b44b257f0888c76f9c, type: 3}
-      propertyPath: requireTrivia
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4500272035318632187, guid: fdc7fb9734a7c1b44b257f0888c76f9c, type: 3}
       propertyPath: checkpointBossSpawner
@@ -107488,6 +107477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab1d61e4e24ea54f950e170f0ba0072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+  resetLabel: {fileID: 0}
 --- !u!1 &1450166146
 GameObject:
   m_ObjectHideFlags: 0
@@ -111817,7 +111807,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1001, guid: 7b9f06c65eee5ea5bed77f1eab22f752, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.47
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 1001, guid: 7b9f06c65eee5ea5bed77f1eab22f752, type: 3}
       propertyPath: m_LocalPosition.y
@@ -115434,6 +115424,17 @@ MonoBehaviour:
     m_Extent: {x: 0.13375017, y: 0.12312508, z: 0}
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+--- !u!114 &864200000000000001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4103942131012229134, guid: 39c30a23f413cf9488f0653fb68da75f, type: 3}
+  m_PrefabInstance: {fileID: 344708339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229dc9d5098ad6043a72badf5b266937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!212 &884094204473977578
 SpriteRenderer:
   serializedVersion: 2
