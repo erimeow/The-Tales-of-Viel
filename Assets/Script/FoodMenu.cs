@@ -18,6 +18,11 @@ internal sealed class FoodMenu : MonoBehaviour
     private bool market;
     private int lastCoins;
     private int lastMeat;
+    private readonly GameObject[] cards = new GameObject[FoodCatalog.Items.Length];
+    private int page;
+    private TMP_Text pageLabel;
+    private Button previousPage;
+    private Button nextPage;
 
     public bool IsOpen => panel != null && panel.gameObject.activeSelf;
     public bool MarketOpen => IsOpen && market;
@@ -28,35 +33,52 @@ internal sealed class FoodMenu : MonoBehaviour
         canvas = HudArt.Overlay(null, "Food inventory HUD", 90, true);
         bagButton = MakeButton(canvas.transform, "Food [I]", Vector2.one, new Vector2(-76, -72),
             new Vector2(124, 34), ToggleBag, out _).gameObject;
-        panel = HudArt.Rect(canvas.transform, "Food panel", Center, Vector2.zero, new Vector2(704, 452));
-        HudArt.Image(panel, HudArt.Gold).raycastTarget = true;
-        var content = HudArt.Rect(panel, "Contents", Center, Vector2.zero, new Vector2(696, 444));
-        HudArt.ShopPanel(HudArt.Image(content, HudArt.Ink));
-        title = HudArt.Text(content, "Title", "", Center, new Vector2(-65, 176), new Vector2(490, 39), 30, HudArt.Gold);
-        title.fontStyle = FontStyles.Bold;
-        MakeButton(content, "Close", Center, new Vector2(272, 176), new Vector2(98, 34), Close, out _);
-        balance = HudArt.Text(content, "Wallet", "", Center, new Vector2(0, 129), new Vector2(640, 30), 18, HudArt.Gold);
+        panel = HudArt.Rect(canvas.transform, "Food panel", Center, Vector2.zero, new Vector2(724, 570));
+        MarketArt.Surface(panel, MarketArt.Paper);
+        panel.GetComponent<Image>().raycastTarget = true;
+        var content = panel;
+        MarketArt.Surface(HudArt.Rect(content, "Title ribbon", Center, new Vector2(0, 249), new Vector2(500, 42)), MarketArt.Edge);
+        title = HudArt.Text(content, "Title", "", Center, new Vector2(0, 249), new Vector2(490, 38), 29, MarketArt.TextColor);
+        MakeButton(content, "Exit", Center, new Vector2(0, -252), new Vector2(160, 32), Close, out _);
+        balance = HudArt.Text(content, "Wallet", "", Center, new Vector2(0, 208), new Vector2(670, 30), 19, MarketArt.TextColor);
+        previousPage = MakeButton(content, "<", Center, new Vector2(-115, 155), new Vector2(70, 28), () => ChangePage(-1), out _);
+        nextPage = MakeButton(content, ">", Center, new Vector2(115, 155), new Vector2(70, 28), () => ChangePage(1), out _);
+        pageLabel = HudArt.Text(content, "Page", "", Center, new Vector2(0, 155), new Vector2(150, 28), 18, MarketArt.TextColor);
         for (int i = 0; i < FoodCatalog.Items.Length; i++)
         {
             int index = i;
             var food = FoodCatalog.Items[i];
-            var row = HudArt.Rect(content, food.Name, Center, new Vector2(0, 85 - i * 54), new Vector2(648, 49));
-            HudArt.Image(row, new Color32(65, 45, 45, 255));
-            var icon = HudArt.Image(HudArt.Rect(row, "Icon", Center, new Vector2(-292, 0), new Vector2(36, 36)), Color.white);
+            var row = HudArt.Rect(content, food.Name, Center, new Vector2((i % 3 - 1) * 226, -25), new Vector2(210, 318));
+            cards[i] = row.gameObject;
+            MarketArt.Surface(row, MarketArt.Card);
+            MarketArt.Surface(HudArt.Rect(row, "Icon well", Center, new Vector2(0, 98), new Vector2(196, 108)), MarketArt.Paper);
+            var icon = HudArt.Image(HudArt.Rect(row, "Icon", Center, new Vector2(0, 98), new Vector2(82, 82)), Color.white);
             icon.sprite = food.Icon;
             icon.preserveAspect = true;
-            var name = HudArt.Text(row, "Name", food.Name, Center, new Vector2(-142, 11), new Vector2(236, 23), 18, HudArt.Cream);
-            name.alignment = TextAlignmentOptions.Left;
-            var description = HudArt.Text(row, "Description", food.Description, Center, new Vector2(-142, -11),
-                new Vector2(236, 20), 14, HudArt.Cream);
-            description.alignment = TextAlignmentOptions.Left;
-            details[i] = HudArt.Text(row, "Details", "", Center, new Vector2(85, 0), new Vector2(206, 42), 16, HudArt.Gold);
-            actions[i] = MakeButton(row, "Action", Center, new Vector2(255, 0), new Vector2(108, 33),
+            MarketArt.Surface(HudArt.Rect(row, "Name ribbon", Center, new Vector2(0, 25), new Vector2(198, 34)), MarketArt.Edge);
+            HudArt.Text(row, "Name", food.Name.ToUpperInvariant(), Center, new Vector2(0, 25), new Vector2(190, 30), 18, MarketArt.TextColor);
+            HudArt.Text(row, "Description", food.Description, Center, new Vector2(0, -23),
+                new Vector2(184, 56), 17, MarketArt.TextColor);
+            details[i] = HudArt.Text(row, "Details", "", Center, new Vector2(0, -84), new Vector2(194, 52), 16, MarketArt.TextColor);
+            actions[i] = MakeButton(row, "Action", Center, new Vector2(0, -135), new Vector2(190, 30),
                 () => Select(index), out actionText[i]);
         }
 
-        message = HudArt.Text(content, "Status", "", Center, new Vector2(0, -177), new Vector2(642, 34), 17, HudArt.Cream);
+        message = HudArt.Text(content, "Status", "", Center, new Vector2(0, -211), new Vector2(680, 40), 16, MarketArt.TextColor);
+        foreach (var label in panel.GetComponentsInChildren<TMP_Text>(true))
+            MarketArt.Typography(label);
+        ChangePage(0);
         panel.gameObject.SetActive(false);
+    }
+
+    private void ChangePage(int direction)
+    {
+        int pages = (cards.Length + 2) / 3;
+        page = Mathf.Clamp(page + direction, 0, pages - 1);
+        for (int i = 0; i < cards.Length; i++) cards[i].SetActive(i / 3 == page);
+        pageLabel.text = $"{page + 1} / {pages}";
+        previousPage.interactable = page > 0;
+        nextPage.interactable = page < pages - 1;
     }
 
     private void OnDestroy()
@@ -120,6 +142,8 @@ internal sealed class FoodMenu : MonoBehaviour
             return false;
 
         market = shop;
+        page = 0;
+        ChangePage(0);
         title.text = shop ? "FOOD MARKET" : "INVENTORY  /  FOOD";
         message.text = shop ? "Purchases go into your food inventory. Eat later with I." : "Choose a food to restore health.";
         player.Body.linearVelocity = Vector2.zero;
@@ -176,7 +200,7 @@ internal sealed class FoodMenu : MonoBehaviour
         button.targetGraphic = image;
         button.onClick.AddListener(() => click());
         text = HudArt.Text(rect, "Label", label, Center, new Vector2(0, 2), size, 16, HudArt.Cream);
-        HudArt.ShopButton(button, image, text, label == "Close");
+        MarketArt.Button(button, image, text);
         return button;
     }
 }

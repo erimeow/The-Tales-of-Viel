@@ -76,6 +76,20 @@ public class gameManager : MonoBehaviour
 
     public Inventory Inventory { get; } = new Inventory(includeStarterItems: false);
 
+    public int ArcherSpeedTier { get; private set; }
+    public float ArcherAttackSpeed => ArcherSpeedCatalog.Multiplier(ArcherSpeedTier);
+
+    public bool TryBuyArcherSpeed(int tier)
+    {
+        if (tier <= 0 || tier >= ArcherSpeedCatalog.Count || tier != ArcherSpeedTier + 1)
+            return false;
+        if (!TrySpend(ArcherSpeedCatalog.Coins(tier), ArcherSpeedCatalog.Meat(tier)))
+            return false;
+        ArcherSpeedTier = tier;
+        UpdateUI();
+        return true;
+    }
+
     public bool TryBuyFood(Item.ItemType type)
     {
         if (!FoodCatalog.TryGet(type, out var food) || !TrySpend(food.Coins, food.Meat))
@@ -151,6 +165,7 @@ public class gameManager : MonoBehaviour
         attkCollected = 0;
         pendingHealthScene = -1;
         Inventory.Clear();
+        ArcherSpeedTier = 0;
         ownedShields = 0;
         EquippedShield = 0;
         System.Array.Clear(ownedWeapons, 0, ownedWeapons.Length);

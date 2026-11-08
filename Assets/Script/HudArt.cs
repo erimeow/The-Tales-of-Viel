@@ -2,6 +2,52 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+internal static class MarketArt
+{
+    internal static readonly Color Paper = new Color32(185, 139, 96, 255);
+    internal static readonly Color Card = new Color32(157, 99, 75, 255);
+    internal static readonly Color Edge = new Color32(99, 55, 58, 255);
+    internal static readonly Color Gold = new Color32(229, 198, 113, 255);
+    internal static readonly Color TextColor = new Color32(255, 241, 218, 255);
+    private static readonly TMP_FontAsset Font = Resources.Load<TMP_FontAsset>("Fonts & Materials/Electronic Highway Sign SDF");
+
+    internal static void Typography(TMP_Text label)
+    {
+        if (Font != null) label.font = Font;
+        label.fontStyle = FontStyles.Normal;
+        label.characterSpacing = 0;
+        label.color = TextColor;
+        label.enableAutoSizing = true;
+        label.fontSizeMin = 12;
+        label.fontSizeMax = label.fontSize;
+    }
+
+    internal static void Surface(RectTransform rect, Color color)
+    {
+        HudArt.Image(rect, color);
+        var outline = rect.gameObject.AddComponent<UnityEngine.UI.Outline>();
+        outline.effectColor = Edge;
+        outline.effectDistance = new Vector2(3, -3);
+    }
+
+    internal static void Button(UnityEngine.UI.Button button, UnityEngine.UI.Image image, TMP_Text label)
+    {
+        image.sprite = null;
+        image.color = Card;
+        var outline = image.gameObject.AddComponent<UnityEngine.UI.Outline>();
+        outline.effectColor = Gold;
+        outline.effectDistance = new Vector2(2, -2);
+        var colors = button.colors;
+        colors.normalColor = Color.white;
+        colors.highlightedColor = new Color32(255, 228, 173, 255);
+        colors.pressedColor = new Color32(188, 145, 121, 255);
+        colors.disabledColor = new Color32(130, 119, 105, 255);
+        button.colors = colors;
+        Typography(label);
+        label.text = label.text.ToUpperInvariant();
+    }
+}
+
 internal static class HudArt
 {
     public static readonly Color Gold = new Color32(248, 210, 124, 255);

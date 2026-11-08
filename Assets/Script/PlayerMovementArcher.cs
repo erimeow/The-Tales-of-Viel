@@ -211,7 +211,8 @@ public class PlayerMovementArcher : MonoBehaviour
 
         // Start shooting cooldown
         isReadyToShoot = false;
-        Invoke(nameof(ReloadGun), Mathf.Max(0.01f, fireRate));
+        float attackSpeed = gameManager.instance != null ? gameManager.instance.ArcherAttackSpeed : 1f;
+        Invoke(nameof(ReloadGun), Mathf.Max(0.01f, fireRate) / attackSpeed);
     }
 
     void ReloadGun()

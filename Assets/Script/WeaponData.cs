@@ -49,6 +49,14 @@ internal static class WeaponShopCatalog
     public static int Meat(int tier) => Tiers[tier].Meat;
 }
 
+internal static class ArcherSpeedCatalog
+{
+    public const int Count = 3;
+    public static float Multiplier(int tier) => 1f + Mathf.Clamp(tier, 0, Count - 1) * .5f;
+    public static int Coins(int tier) => tier == 1 ? 6 : 12;
+    public static int Meat(int tier) => tier == 1 ? 2 : 4;
+}
+
 internal static class ShieldShopCatalog
 {
     private static readonly (string Name, int Defense, int Coins, int Meat)[] Tiers =

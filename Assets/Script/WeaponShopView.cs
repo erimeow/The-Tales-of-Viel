@@ -22,6 +22,11 @@ internal sealed class WeaponShopView : MonoBehaviour
     private int lastMeat;
     private int lastEquipped;
     private int lastShield;
+    private int lastSpeed = -1;
+    private readonly RectTransform[] sections = new RectTransform[3];
+    private readonly UnityEngine.UI.Button[] tabs = new UnityEngine.UI.Button[3];
+    private readonly (UnityEngine.UI.Button Button, TMP_Text Label, UnityEngine.UI.Image Icon)[] speedRows =
+        new (UnityEngine.UI.Button, TMP_Text, UnityEngine.UI.Image)[ArcherSpeedCatalog.Count - 1];
 
     public static WeaponShopView Create(Transform stall, CharacterRole role, Action dismiss, Action<int, bool> select)
     {
@@ -52,50 +57,80 @@ internal sealed class WeaponShopView : MonoBehaviour
         shade.GetComponent<Image>().color = new Color32(16, 11, 15, 160);
 
         bool warrior = role == CharacterRole.Warrior;
-        int extraHeight = warrior ? 188 : 0;
-        int top = extraHeight / 2;
-        RectTransform frame = Place(shade, "Gold frame", 0, 0, 710, 386 + extraHeight);
-        Paint(frame, Gold);
-        RectTransform panel = Place(frame, "Shop", 0, 0, 702, 378 + extraHeight);
-        HudArt.ShopPanel(Paint(panel, Panel));
+        int top = 0;
+        RectTransform panel = Place(shade, "Shop", 0, 0, 724, 570);
+        MarketArt.Surface(panel, MarketArt.Paper);
+        MarketArt.Surface(Place(panel, "Title ribbon", 0, 249, 500, 42), MarketArt.Edge);
 
-        heading = Label(panel, "Title", "WEAPON SHOP", -78, 150 + top, 490, 38, 33, Gold);
-        heading.fontStyle = FontStyles.Bold;
-        MakeButton(panel, "Leave", 270, 150 + top, 112, 36, dismiss, out _);
-        balance = Label(panel, "Wallet", "", 0, 109 + top, 646, 30, 19, Gold);
-        equipped = Label(panel, "Equipment", "", 0, 77 + top, 646, 26, 18, Cream);
-        Paint(Place(panel, "Divider", 0, 55 + top, 650, 2), Gold);
-
+        heading = Label(panel, "Title", "BUY SOMETHING!", 0, 249, 490, 38, 29, Cream);
+        MakeButton(panel, "Exit", 0, -252, 160, 32, dismiss, out _);
+        balance = Label(panel, "Wallet", "", 0, 214, 670, 26, 19, Cream);
+        equipped = Label(panel, "Equipment", "", 0, 185, 680, 26, 17, Cream);
+        for (int i = 0; i < sections.Length; i++)
+            sections[i] = Place(panel, "Item section " + i, 0, 0, 700, 400);
+        tabs[0] = MakeButton(panel, "Weapons", -110, 151, 180, 28, () => ShowSection(0), out _);
         if (warrior)
-            Label(panel, "Weapon section", "SWORDS", 0, 42 + top, 650, 20, 16, Gold);
+            tabs[1] = MakeButton(panel, "Shields", 110, 151, 180, 28, () => ShowSection(1), out _);
+        if (role == CharacterRole.Archer)
+            tabs[2] = MakeButton(panel, "Quick Draw", 110, 151, 180, 28, () => ShowSection(2), out _);
         for (int tier = 0; tier < weapons.Length; tier++)
         {
             int index = tier;
-            weapons[tier] = MakeRow(panel, WeaponShopCatalog.Name(role, tier), tier,
+            weapons[tier] = MakeRow(sections[0], WeaponShopCatalog.Name(role, tier), tier,
                 (warrior ? 12 : 25) + top - tier * 49, $"+{WeaponShopCatalog.Damage(tier)} DMG",
                 WeaponShopCatalog.Coins(tier), WeaponShopCatalog.Meat(tier), () => select(index, false));
         }
 
         if (warrior)
         {
-            Label(panel, "Shield section", "SHIELDS", 0, -115 + top, 650, 22, 16, Gold);
             for (int tier = 0; tier < shields.Length; tier++)
             {
                 int index = tier;
-                shields[tier] = MakeRow(panel, ShieldShopCatalog.Name(tier), tier,
+                shields[tier] = MakeRow(sections[1], ShieldShopCatalog.Name(tier), tier,
                     -146 + top - tier * 49, $"+{ShieldShopCatalog.Defense(tier)} DEF",
                     ShieldShopCatalog.Coins(tier), ShieldShopCatalog.Meat(tier), () => select(index, true));
                 shields[tier].Icon.sprite = Resources.Load<Sprite>(ShieldShopCatalog.ArtPath(tier, "Icon"));
             }
         }
 
-        message = Label(panel, "Message", "", 0, -143 - top, 646, 36, 18, Gold);
+        if (role == CharacterRole.Archer)
+        {
+            for (int tier = 1; tier < ArcherSpeedCatalog.Count; tier++)
+            {
+                int index = tier;
+                speedRows[tier - 1] = MakeRow(sections[2], "Quick Draw " + tier, tier,
+                    -140 + top - (tier - 1) * 49, $"+{tier * 50}% SPD",
+                    ArcherSpeedCatalog.Coins(tier), ArcherSpeedCatalog.Meat(tier), () =>
+                    {
+                        var wallet = gameManager.instance;
+                        if (wallet == null) return;
+                        ShowMessage(wallet.TryBuyArcherSpeed(index)
+                            ? $"Quick Draw {index} learned. Your arrows fire faster."
+                            : "Buy the previous tier first and check your coins and meat.");
+                        Refresh(wallet);
+                    }, tier - 1);
+                speedRows[tier - 1].Icon.sprite = Resources.Load<Sprite>(WeaponShopCatalog.ArtPath(role, tier, "Icon"));
+            }
+        }
+
+        message = Label(panel, "Message", "", 0, -211, 680, 40, 16, Cream);
+        ShowSection(0);
+    }
+
+    private void ShowSection(int selected)
+    {
+        for (int i = 0; i < sections.Length; i++)
+        {
+            sections[i].gameObject.SetActive(i == selected);
+            if (tabs[i] != null) tabs[i].interactable = i != selected;
+        }
     }
 
     public void Open(CharacterRole characterRole, Sprite icon)
     {
         role = characterRole;
-        heading.text = $"WEAPON SHOP  /  {WeaponShopCatalog.Category(role).ToUpperInvariant()}";
+        heading.text = "BUY SOMETHING!";
+        ShowSection(0);
         for (int tier = 0; tier < WeaponShopCatalog.Count; tier++)
         {
             weapons[tier].Icon.sprite = tier == 0
@@ -112,11 +147,12 @@ internal sealed class WeaponShopView : MonoBehaviour
     {
         int current = wallet.EquippedWeapon(role);
         int shield = role == CharacterRole.Warrior ? wallet.EquippedShield : 0;
-        if (current == lastEquipped && shield == lastShield && wallet.coinCollected == lastCoins && wallet.meatCollected == lastMeat)
+        if (current == lastEquipped && shield == lastShield && wallet.ArcherSpeedTier == lastSpeed && wallet.coinCollected == lastCoins && wallet.meatCollected == lastMeat)
             return;
 
         lastEquipped = current;
         lastShield = shield;
+        lastSpeed = wallet.ArcherSpeedTier;
         lastCoins = wallet.coinCollected;
         lastMeat = wallet.meatCollected;
         balance.text = $"COINS  {lastCoins}      MEAT  {lastMeat}";
@@ -125,6 +161,20 @@ internal sealed class WeaponShopView : MonoBehaviour
         for (int tier = 0; tier < weapons.Length; tier++)
             RefreshRow(weapons[tier], tier == current, wallet.OwnsWeapon(role, tier),
                 WeaponShopCatalog.Coins(tier), WeaponShopCatalog.Meat(tier));
+
+        if (role == CharacterRole.Archer)
+        {
+            equipped.text += $"   |   ATTACK SPEED x{wallet.ArcherAttackSpeed:0.0}";
+            for (int tier = 1; tier < ArcherSpeedCatalog.Count; tier++)
+            {
+                var row = speedRows[tier - 1];
+                bool owned = tier <= lastSpeed;
+                bool next = tier == lastSpeed + 1;
+                row.Label.text = owned ? "Learned" : next ? "Buy" : "Locked";
+                row.Button.interactable = next && lastCoins >= ArcherSpeedCatalog.Coins(tier)
+                    && lastMeat >= ArcherSpeedCatalog.Meat(tier);
+            }
+        }
 
         if (role == CharacterRole.Warrior)
         {
@@ -142,17 +192,19 @@ internal sealed class WeaponShopView : MonoBehaviour
     }
 
     private static (Button, TMP_Text, Image) MakeRow(RectTransform panel, string name, int tier,
-        int y, string bonus, int coins, int meat, Action select)
+        int y, string bonus, int coins, int meat, Action select, int slot = -1)
     {
-        RectTransform row = Place(panel, name, 0, y, 650, 44);
-        Paint(row, tier % 2 == 0 ? new Color32(73, 47, 40, 255) : new Color32(61, 39, 35, 255));
-        Image icon = Paint(Place(row, "Icon", -298, 0, 34, 34), Color.white);
+        RectTransform row = Place(panel, name, ((slot < 0 ? tier : slot) - 1) * 226, -25, 210, 318);
+        MarketArt.Surface(row, MarketArt.Card);
+        MarketArt.Surface(Place(row, "Icon well", 0, 98, 196, 108), MarketArt.Paper);
+        Image icon = Paint(Place(row, "Icon", 0, 98, 82, 82), Color.white);
         icon.preserveAspect = true;
-        Label(row, "Name", name, -169, 0, 202, 40, 19, Cream);
-        Label(row, "Bonus", bonus, -15, 0, 98, 40, 17, Gold);
+        MarketArt.Surface(Place(row, "Name ribbon", 0, 25, 198, 34), MarketArt.Edge);
+        Label(row, "Name", name.ToUpperInvariant(), 0, 25, 190, 30, 18, Cream);
+        Label(row, "Bonus", bonus + (name.StartsWith("Quick Draw") ? "\nFIRE ARROWS FASTER" : name.Contains("Shield") ? "\nADDED DEFENSE" : "\nATTACK BONUS"), 0, -27, 184, 64, 18, Cream);
         Label(row, "Price", tier == 0 ? "Starter gear" : $"{coins} coins   {meat} meat",
-            118, 0, 166, 40, 16, Cream);
-        Button button = MakeButton(row, "Buy", 249, 0, 124, 34, select, out TMP_Text label);
+            0, -87, 190, 36, 17, Cream);
+        Button button = MakeButton(row, "Buy", 0, -135, 190, 30, select, out TMP_Text label);
         return (button, label, icon);
     }
 
@@ -181,8 +233,8 @@ internal sealed class WeaponShopView : MonoBehaviour
     {
         var label = Place(parent, name, x, y, width, height).gameObject.AddComponent<TextMeshProUGUI>();
         label.text = value;
-        HudArt.Typography(label, name == "Title" || name.EndsWith("section", StringComparison.Ordinal));
         label.fontSize = size;
+        MarketArt.Typography(label);
         label.alignment = TextAlignmentOptions.Center;
         label.color = color;
         label.raycastTarget = false;
@@ -199,7 +251,7 @@ internal sealed class WeaponShopView : MonoBehaviour
         button.targetGraphic = background;
         button.onClick.AddListener(() => action());
         label = Label(rect, "Label", value, 0, 2, width, height, 16, Cream);
-        HudArt.ShopButton(button, background, label, value == "Leave");
+        MarketArt.Button(button, background, label);
         return button;
     }
 }
