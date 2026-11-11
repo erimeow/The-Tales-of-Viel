@@ -199,9 +199,9 @@ public sealed class EndingBedroom : MonoBehaviour
             case 2:
                 finaleHeading.text = "GROUP 1  /  DEVELOPMENT CREDITS";
                 finaleBody.text = "RENIER C. LABONITE  -  Project Leader / Documentation / Developer\n" +
-                    "NORLITO D. DELA CRUZ  -  UI / Design\n" +
-                    "NIEL KRISTIAN I. MAGTOTO  -  Programmer\n" +
-                    "JOHN PAUL A. MOSCOSA  -  Audio\n" +
+                    "NORLITO D. DELA CRUZ  -  UI / Design / Documentation\n" +
+                    "NIEL KRISTIAN I. MAGTOTO  -  Programmer / Diagrams\n" +
+                    "JOHN PAUL A. MOSCOSA  -  Audio / Documentation\n" +
                     "JOHN JOVIT JAMES Q. NARES  -  Game Level Design / Documentation\n" +
                     "MARVIN G. TRAQUIÑA  -  Quality Assurance / Documentation";
                 break;
